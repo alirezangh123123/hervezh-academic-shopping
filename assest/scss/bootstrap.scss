@@ -1,1 +1,10 @@
+$primary: #ffc107;
+$light: #fff;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 320px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
