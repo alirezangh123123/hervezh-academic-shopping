@@ -1,3 +1,4 @@
+@import "./swipper.scss";
 @font-face {
   font-family: "shabnam";
   src: url("../webfont/Shabnam-FD.eot") format("eot"),
@@ -44,8 +45,7 @@ header {
   .header-title-wrapper {
     form {
       .search-header-input {
-        ::placeholder{
-          
+        ::placeholder {
         }
         &:focus {
           box-shadow: none !important;
@@ -76,6 +76,40 @@ header {
           padding: 0 !important;
         }
       }
+    }
+  }
+}
+
+//
+//
+// courses slider
+//
+//
+.courses-card {
+  transition: all 0.4s;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: var(--white--);
+  &:hover {
+    transform: translateY(-0.7rem);
+  }
+  .courses-card-img {
+    transform: translateY(-3rem);
+  }
+  .courses-card-body {
+    .custom-card-title {
+      margin-top: -23px;
+      a {
+        transition: all 0.3s;
+        &:hover {
+          color: var(--primary--) !important;
+        }
+      }
+    }
+  }
+  .courses-card-footer {
+    span {
+      color: var(--gray--);
     }
   }
 }
