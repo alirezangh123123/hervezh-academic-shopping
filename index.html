@@ -6,8 +6,28 @@
     <title>main-page</title>
     <link rel="stylesheet" href="assest/css/font-awesome.css" />
     <link rel="stylesheet" href="assest/css/bootstrap.css" />
-    <!-- <link rel="stylesheet" href="assest/component/nav-bar-menu/_nav-menu.css" /> -->
+    <link rel="stylesheet" href="assest/css/swiper-bundle.css" />
+    <link rel="stylesheet" href="assest/css/swipper.css" />
     <link rel="stylesheet" href="assest/css/style.css" />
+    <style>
+      swiper-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+      }
+
+      swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <!-- start-nav-bar -->
@@ -62,8 +82,26 @@
         </div>
       </section>
     </header>
+    <section class="course-slider bg-white mt-6">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="title-courses d-flex flex-column text-center">
+              <h3 class="">جدیدترین دوره های آکادمی هروژ</h3>
+              <p class="">آینده شغلی خود را با داشتن تخصص تضمین کنید</p>
+            </div>
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper"
+              id="course-slider-wrapper">
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="assest/js/bootstrap.bundle.min.js"></script>
-
+    <script src="assest/js/swiper-bundle.js"></script>
     <script type="module" src="assest/js/main.js"></script>
   </body>
 </html>

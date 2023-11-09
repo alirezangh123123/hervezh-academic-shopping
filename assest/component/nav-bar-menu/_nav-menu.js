@@ -307,7 +307,6 @@ class NavBar extends HTMLElement {
       .addEventListener("click", () => {
         this.shadowRoot.querySelector(".menu-mobile").classList.add("active");
       });
-    console.log(this.shadowRoot.querySelector(".icon__close"));
     this.shadowRoot
       .querySelector(".icon__close")
       .addEventListener("click", () => {
