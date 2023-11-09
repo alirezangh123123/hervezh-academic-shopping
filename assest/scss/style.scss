@@ -39,5 +39,43 @@ a {
 header {
   background: url(../img/page-bg.jpg) center center no-repeat;
   background-size: cover;
-  height: 100vh;
+}
+.main-header {
+  .header-title-wrapper {
+    form {
+      .search-header-input {
+        ::placeholder{
+          
+        }
+        &:focus {
+          box-shadow: none !important;
+        }
+      }
+    }
+  }
+}
+// resposive font-size text-header
+@media screen and (max-width: 576px) {
+  .main-header {
+    .desc-1,
+    .desc-2 {
+      font-size: 13px;
+    }
+    .main-motto {
+      font-size: 27px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main-header {
+    .header-title-wrapper {
+      form {
+        .search-header-input {
+          font-size: 14px;
+          padding: 0 !important;
+        }
+      }
+    }
+  }
 }

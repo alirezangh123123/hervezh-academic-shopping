@@ -1,5 +1,6 @@
 $primary: #ffc107;
 $light: #fff;
+// custom breakpoint resulotion
 $grid-breakpoints: (
   xs: 0,
   sm: 320px,
@@ -7,4 +8,17 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px,
 );
+// add some new custom margin classes
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  6: $spacer * 3,
+  7: $spacer * 5,
+  8: $spacer * 7,
+  9: $spacer * 9,
+) !default;
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

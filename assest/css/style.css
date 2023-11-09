@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: "shabnam";
   src: url("../webfont/Shabnam-FD.eot") format("eot"), url("../webfont/Shabnam-FD.ttf") format("truetype"), url("../webfont/Shabnam-FD.woff") format("woff");
@@ -34,5 +33,24 @@ a {
 header {
   background: url(../img/page-bg.jpg) center center no-repeat;
   background-size: cover;
-  height: 100vh;
+}
+
+.main-header .header-title-wrapper form .search-header-input:focus {
+  box-shadow: none !important;
+}
+
+@media screen and (max-width: 576px) {
+  .main-header .desc-1,
+  .main-header .desc-2 {
+    font-size: 13px;
+  }
+  .main-header .main-motto {
+    font-size: 27px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main-header .header-title-wrapper form .search-header-input {
+    font-size: 14px;
+    padding: 0 !important;
+  }
 }
