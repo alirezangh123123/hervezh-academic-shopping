@@ -483,3 +483,19 @@ section.course-introduce .course-intro-cover img {
     margin-top: -72px !important;
   }
 }
+section.property-courses .property-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+section.property-courses .property-text-wrapper .about-our-plan-1 svg.svg-icon-1 {
+  width: 150px;
+  height: 150px;
+  padding-left: 20px;
+}
+section.property-courses .property-text-wrapper .about-our-plan-2 svg.svg-icon-2 {
+  width: 120px;
+  height: 150px;
+  padding-left: 20px;
+}
