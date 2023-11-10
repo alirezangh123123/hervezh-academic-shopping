@@ -447,12 +447,21 @@ section.course-introduce .course-intro-info .course-intro-selling-info div.cours
   margin-top: 20px;
   font-size: 22px;
 }
+section.course-introduce .course-intro-info .purchase-btn-wrapper button a {
+  transition: all 0.4s;
+}
+section.course-introduce .course-intro-info .purchase-btn-wrapper:hover button {
+  background-color: var(--primary--) !important;
+}
+section.course-introduce .course-intro-info .purchase-btn-wrapper:hover button a {
+  color: var(--white--) !important;
+}
 section.course-introduce .course-intro-cover img {
   padding-top: 10px;
-  border-radius: 40px;
+  border-radius: 40px 40px 0px 0px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .course-intro-info h4 {
     position: unset !important;
     width: 100% !important;
@@ -464,8 +473,13 @@ section.course-introduce .course-intro-cover img {
     border-radius: 15px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .course-intro-info h4 {
     font-size: 14px !important;
+  }
+}
+@media screen and (max-width: 1206px) {
+  .purchase-btn-wrapper button {
+    margin-top: -72px !important;
   }
 }
