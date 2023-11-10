@@ -4,7 +4,7 @@ $light: #fff;
 $grid-breakpoints: (
   xs: 0,
   sm: 320px,
-  md: 768px,
+  md: 769px,
   lg: 992px,
   xl: 1200px,
 );
@@ -23,10 +23,12 @@ $spacers: (
   9: $spacer * 9,
 ) !default;
 // scss-docs-start border-radius-variables
-$border-radius:               .8rem !default;
-$border-radius-sm:            1rem !default;
-$border-radius-lg:            1.2rem !default;
-$border-radius-xl:            1.5rem !default;
-$border-radius-xxl:           2.3rem !default;
-$border-radius-pill:          50rem !default;
+$border-radius: 0.8rem !default;
+$border-radius-sm: 1rem !default;
+$border-radius-lg: 1.2rem !default;
+$border-radius-xl: 1.5rem !default;
+$border-radius-xxl: 2.3rem !default;
+$border-radius-pill: 50rem !default;
+// enable-negative-margin
+$enable-negative-margins: true !default;
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
