@@ -1,0 +1,74 @@
+.footer  .container-fluid {
+  background-color: var(--blueShade--);
+}
+.footer  .shortcut .list-footer-courses-shortcut ul li {
+  display: flex;
+  justify-content: flex-end;
+  margin: 12px 0px;
+  align-items: center;
+}
+.footer  .shortcut .list-footer-courses-shortcut ul li i {
+  color: var(--light--);
+  font-size: 8px;
+  margin-left: 8px;
+  transition: all 0.3s !important;
+}
+.footer  .shortcut .list-footer-courses-shortcut ul li a {
+  transition: all 0.3s !important;
+}
+.footer  .shortcut .list-footer-courses-shortcut ul li:hover a {
+  color: var(--primary--) !important;
+  transform: scale(1.08);
+}
+.footer  .shortcut .list-footer-courses-shortcut ul li:hover i {
+  color: var(--primary--) !important;
+}
+.footer  .contact-section span {
+  margin: 12px 0;
+}
+
+.footer  .contact-section span i {
+  font-size: 19px;
+  vertical-align: middle;
+  margin-left: 7px;
+  padding: 9px;
+  border-radius: 14px;
+  background-color: var(--gray--) !important;
+}
+.footer  .social-icons span i {
+  font-family: "FontBrands";
+  font-size: 40px;
+  margin: 0px 15px;
+  transition: all 0.4s;
+}
+
+.footer  .social-icons span i:hover {
+  color: var(--primary--) !important;
+}
+/* resposive */
+@media screen and (max-width: 400px) {
+  .footer  ul li {
+    font-size: 14px !important;
+  }
+  .footer  h6 {
+    font-size: 16px !important;
+  }
+  .footer  span {
+    font-size: 14px !important;
+  }
+  .footer  .contact-section span i {
+    font-size: 14px !important;
+  }
+  .footer  .contact-section span {
+    font-size: 12px !important;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1050px) {
+  .footer  span.address {
+    font-size: 13px !important;
+  }
+  .footer  .second-row-list,
+  .first-row-list {
+    font-size: 13px;
+  }
+}
