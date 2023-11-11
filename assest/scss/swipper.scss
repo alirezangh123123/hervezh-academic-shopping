@@ -35,5 +35,16 @@
     margin: auto;
   }
 }
+// 
+// article swiper
+// 
+// 
+.article-swiper .article-card .article-card-body {
+  text-align: right !important;
+}
+.article-container{
+   background-color: var(--blueShade--);
+color: var(--white--);
+}
 @import "../../node_modules/swiper/modules/navigation.scss";
 @import "../../node_modules/swiper/modules/pagination.scss";

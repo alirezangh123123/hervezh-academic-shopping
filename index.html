@@ -8,26 +8,8 @@
     <link rel="stylesheet" href="assest/css/bootstrap.css" />
     <link rel="stylesheet" href="assest/css/swiper-bundle.css" />
     <link rel="stylesheet" href="assest/css/swipper.css" />
+    <link rel="stylesheet" href="assest/component/articles/article.css" />
     <link rel="stylesheet" href="assest/css/style.css" />
-    <style>
-      .swiper-container {
-        width: 100%;
-        padding-top: 50px;
-        padding-bottom: 50px;
-      }
-
-      .swiper-slide {
-        background-position: center;
-        background-size: cover;
-        width: 300px;
-        height: 300px;
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-      }
-    </style>
   </head>
   <body>
     <!-- start-nav-bar -->
@@ -167,7 +149,7 @@
     </section>
     <!-- property courses section -->
     <section class="property-courses mt-6">
-      <div class="container ">
+      <div class="container">
         <div class="row">
           <div class="col-md-5 owner-cover-wrapper h-100">
             <img
@@ -387,8 +369,24 @@
       </div>
     </section>
     <!-- article section -->
-    <section class="article">
-      
+    <section class="article mt-8">
+      <div class="container-fluid article-container">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 articles-wrapper">
+              <div
+                class="article-title-wrapper d-flex flex-column align-items-end"
+              >
+                <h3 class="article-title fw-bold mt-4">آخرین مقالات وبلاگ</h3>
+                <p class="aritcle-motto mt-3">...با ما بروز باشید</p>
+              </div>
+              <div class="swiper article-swiper ">
+                <div class="swiper-wrapper" id="article-slider"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <script src="assest/js/bootstrap.bundle.min.js"></script>
     <script src="assest/js/swiper-bundle.js"></script>

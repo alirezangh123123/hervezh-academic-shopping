@@ -1,0 +1,13 @@
+
+@media screen and (max-width:992px) {
+    .article-swiper .article-card .article-card-body h6,p{
+        font-size: 13px !important;
+    } 
+    .article-swiper .article-card .article-card-body span,button{
+    font-size: 12px !important;
+    }
+}
+.article-card{
+    height:  100% !important;
+    
+}

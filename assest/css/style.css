@@ -37,6 +37,15 @@
     margin: auto;
   }
 }
+.article-swiper .article-card .article-card-body {
+  text-align: right !important;
+}
+
+.article-container {
+  background-color: var(--blueShade--);
+  color: var(--white--);
+}
+
 :root {
   --swiper-navigation-size: 44px;
   /*

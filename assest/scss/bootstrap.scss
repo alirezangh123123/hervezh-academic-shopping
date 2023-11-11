@@ -1,5 +1,6 @@
 $primary: #ffc107;
 $light: #fff;
+
 // custom breakpoint resulotion
 $grid-breakpoints: (
   xs: 0,
@@ -31,4 +32,6 @@ $border-radius-xxl: 2.3rem !default;
 $border-radius-pill: 50rem !default;
 // enable-negative-margin
 $enable-negative-margins: true !default;
+// equal card height
+$card-height:100%;
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

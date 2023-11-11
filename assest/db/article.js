@@ -6,7 +6,8 @@ const articles = [
     shortDescription:
       "از رنگ‌ها برای جذب مشتریان استفاده کنید! در این مقاله، نقش قدرتمند رنگ در تبلیغات و بازاریابی را بررسی می‌کنیم. از طریق انتخاب درست رنگ‌ها، می‌توانید احساسات و واکنش‌های مشتریان را تحت تأثیر قرار داده و موفقیت خود را در بازار بهبود دهید ",
     articleCategory: "UI Designers",
-    pablishDate: "۱۴۰۱ مرداد ۲۷",
+    publishDate: "۱۴۰۲,۰۷,۲۵",
+    cover: "assest/img/blog/634-540x350.jpg",
   },
   {
     id: 2,
@@ -14,7 +15,8 @@ const articles = [
     shortDescription:
       "بازبینی و بهبود سئو سایت با ابزارهای قدرتمند کنسول گوگل! در این مقاله، به تکنیک‌های جذاب و آموزنده برای آنالیز سئو سایت با استفاده از ابزارهای کنسول گوگل پرداخته‌ایم ",
     articleCategory: "SEO",
-    pablishDate: "۱۴۰۱ شهریور ۲",
+    publishDate: "۱۴۰۲,۰۹,۲۸",
+    cover: "assest/img/blog/602-540x350.jpg",
   },
   {
     id: 3,
@@ -22,7 +24,8 @@ const articles = [
     shortDescription:
       "در این مقاله، راهکارهایی برای بهینه‌سازی دیتابیس وردپرس را بررسی می‌کنیم. با انجام این بهینه‌سازی‌ها، می‌توانید سرعت بارگیری سایت خود را افزایش داده و عملکرد بهتری را برای وبسایت وردپرسی خود تجربه کنید",
     articleCategory: "database , SEO",
-    pablishDate: "۱۴۰۱ آبان ۲۷",
+    publishDate: "۱۴۰۲,۰۲,۱۲",
+    cover: "assest/img/blog/605-540x350.jpg",
   },
   {
     id: 4,
@@ -31,7 +34,8 @@ const articles = [
       "عالم نیچ مارکتینگ را درک کنید! در این مقاله، به شرحی ساده و عامیانه به مفهوم نیچ مارکتینگ پرداخته‌ایم. ",
 
     articleCategory: "marketing",
-    pablishDate: "۱۴۰۱ تیر ۱۲",
+    publishDate: "۱۴۰۲,۰۱,۱۲",
+    cover: "assest/img/blog/660-1-540x350.jpg",
   },
   {
     id: 5,
@@ -40,7 +44,8 @@ const articles = [
       "شروع کسب و کار پت‌شاپ آنلاین را تجربه کنید! در این مقاله، به راه‌اندازی پت‌شاپ آنلاین می‌پردازیم",
 
     articleCategory: "startUp",
-    pablishDate: "۱۴۰۱ اسفند ۲۷",
+    publishDate: "۱۴۰۲,۰۹,۱۹",
+    cover: "assest/img/blog/663-540x350.jpg",
   },
 ];
 
