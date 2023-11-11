@@ -318,3 +318,25 @@ a.basket-link:hover i em {
     display: block;
   }
 }
+@media screen and (max-width: 400px) {
+  a.menu-mobile__link span {
+    font-size: 12px !important;
+  }
+  li.menu-mobile__item a,
+  .sub {
+    font-size: 12px !important;
+  }
+  li.menu-mobile__item
+    .menu-mobile__submenu--list
+    li.menu-mobile__submenu--item {
+    font-size: 12px !important;
+  }
+  .menu-mobile__wrapper {
+    overflow-y: auto;
+    padding: 5rem 2rem;
+    background-color: var(--white--);
+    width: 75% !important;
+    height: 100%;
+    margin-right: auto;
+  }
+}
