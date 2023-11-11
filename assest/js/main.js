@@ -2,7 +2,9 @@ let $ = document;
 import { NavBar } from "../component/nav-bar-menu/_nav-menu.js";
 import { articeSlider } from "../component/articles/_article-comp.js";
 import { productSlider } from "./course-slider.js";
+import { Footer } from "../component/footer/footer.js";
 window.customElements.define("navbar-tg", NavBar);
+window.customElements.define("footer-tg", Footer);
 // course-slider
 var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",
