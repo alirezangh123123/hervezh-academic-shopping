@@ -41,3 +41,8 @@ header.header-product .course-intro-info .course-intro-selling-info div.course-i
   margin-top: 20px;
   font-size: 22px;
 }
+
+.product-info-wrapper .motto-svg {
+  width: 90px;
+  height: 90px;
+}

@@ -370,6 +370,11 @@ header.header-product .course-intro-info .course-intro-selling-info div.course-i
   font-size: 22px;
 }
 
+.product-info-wrapper .motto-svg {
+  width: 90px;
+  height: 90px;
+}
+
 @font-face {
   font-family: "shabnam";
   src: url("../webfont/Shabnam-FD.eot") format("eot"), url("../webfont/Shabnam-FD.ttf") format("truetype"), url("../webfont/Shabnam-FD.woff") format("woff");
