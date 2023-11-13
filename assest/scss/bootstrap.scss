@@ -34,4 +34,7 @@ $border-radius-pill: 50rem !default;
 $enable-negative-margins: true !default;
 // equal card height
 $card-height:100%;
+// breadcrumb
+$breadcrumb-active-color:$primary;
+$breadcrumb-divider-color:var(--light--);
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
