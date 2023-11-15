@@ -485,6 +485,15 @@ header.header-product .course-intro-info .course-intro-selling-info div.course-i
     margin-left: 4px;
   }
 }
+.relateSwiper {
+  width: 100%;
+}
+.relateSwiper .swiper-wrapper .swiper-slide .card {
+  width: 300px !important;
+  display: flex;
+  justify-content: unset !important;
+}
+
 @font-face {
   font-family: "shabnam";
   src: url("../webfont/Shabnam-FD.eot") format("eot"), url("../webfont/Shabnam-FD.ttf") format("truetype"), url("../webfont/Shabnam-FD.woff") format("woff");
