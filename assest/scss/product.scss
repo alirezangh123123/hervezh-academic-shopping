@@ -194,3 +194,20 @@ header.header-product {
     margin-left: 4px;
   }
  }
+//  
+//  
+//  relate-course-slider
+//  
+.relateSwiper{
+  width: 100%;
+  .swiper-wrapper{
+    .swiper-slide{
+      .card{
+        width: 300px !important;
+        display: flex;
+        justify-content: unset !important;
+      }
+    }
+  
+  }
+}
