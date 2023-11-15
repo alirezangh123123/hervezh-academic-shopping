@@ -50,3 +50,100 @@ header.header-product {
     height: 90px;
   }
 }
+// accardion description (responsive font size)
+@media screen and (max-width: 480px) {
+  .about-product-title {
+    font-size: 17px !important;
+  }
+  .about-product {
+    p {
+      font-size: 14px !important;
+    }
+  }
+  .suggest-to-use {
+    h5 {
+      font-size: 16px !important;
+    }
+    .advice-list-wrapper {
+      font-size: 13px;
+    }
+  }
+  .avoid-to-use {
+    h5 {
+      font-size: 16px !important;
+    }
+    .advice-list-wrapper {
+      font-size: 13px;
+    }
+  }
+  .product-info-wrapper {
+    .motto-svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .product-motto {
+    span.fw-bold {
+      font-size: 14px !important;
+    }
+    span:not(span.fw-bold) {
+      font-size: 12px !important;
+    }
+  }
+  .faq-wrapper {
+    button {
+      font-size: 13px !important;
+    }
+    .accordion-body {
+      font-size: 12px !important;
+      font-weight: 600 !important;
+    }
+  }
+}
+//
+// session-list-item
+//
+//
+
+.session-list {
+  li {
+    transition: all 0.4s;
+    font-weight: bold;
+    a {
+      transition: all 0.4s;
+    }
+    &:hover a {
+      color: var(--blueLink--) !important;
+    }
+  }
+}
+// responsive font-size of session-list
+@media screen and (max-width: 550px) {
+  .session-list {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    li {
+      font-size: 10px !important;
+
+      :nth-child(2) {
+        visibility: hidden;
+      }
+      :nth-child(2) i {
+        visibility: visible !important;
+      }
+    }
+  }
+}
+@media screen and (max-width:600px) {
+  button.accordion-button{
+    .prod-session-level-explain{
+      p{
+        font-size: 11px !important;
+      }
+      img{
+        width: 60px !important;
+        height: 60px  !important;
+      }
+    }
+  }
+}
