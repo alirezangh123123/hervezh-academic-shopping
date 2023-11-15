@@ -44,10 +44,30 @@ header.header-product {
   }
 }
 // product description
+.product-description{
+  background-color: var(--light--) !important;
+}
 .product-info-wrapper {
   .motto-svg {
     width: 90px;
     height: 90px;
+  }
+}
+// responsive tab-navigation 
+@media screen and (max-width:375px) {
+  button.nav-link{
+    font-size: 14px !important;
+    margin: auto !important;
+  }
+  .user-comment-content{
+    p{
+      font-size: 12px !important;
+    }
+  }
+  .main-answer{
+    p,button{
+      font-size: 12px !important;
+    }
   }
 }
 // accardion description (responsive font size)
@@ -147,3 +167,30 @@ header.header-product {
     }
   }
 }
+// 
+// 
+// answer-box-style
+// 
+
+.main-answer{
+  display: none;// it will show after add active class
+  background-color: var(--lightShade--);
+  textarea{
+    &:focus-visible{
+      outline: none !important;
+    }
+  }
+  .sub-answer-btn{
+    background-color: var(--lightGreen--);
+  }
+}
+.main-answer.active{
+  display: block !important;
+}
+ @media screen and (max-width: 400px) {
+  .cancel-answer-btn{
+    font-size: 12px !important;
+    padding: 0px 2px !important;
+    margin-left: 4px;
+  }
+ }
