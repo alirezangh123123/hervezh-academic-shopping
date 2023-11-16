@@ -49,5 +49,9 @@ $nav-tabs-link-active-color: #ffc107;
 $nav-tabs-border-width: unset;
 $nav-tabs-link-active-bg: inherit;
 $nav-link-color: #7d7d7d;
-$nav-link-font-weight:bold;
+$nav-link-font-weight: bold;
+// dropdown
+$dropdown-item-padding-y: $spacer * 0.5;
+$dropdown-link-hover-color:  #ffffff;
+$dropdown-link-hover-bg:#ffc107;
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

@@ -1,0 +1,44 @@
+// dropdown styles
+.top-bar-wrapper {
+  .right-side-top-bar {
+    button {
+      transition: all 0.3s;
+      &:hover {
+        color: var(--white--);
+        background-color: var(--gray--);
+      }
+    }
+  }
+  .left-side-top-bar {
+    form {
+      input {
+        &:focus {
+          box-shadow: none !important;
+        }
+      }
+    }
+  }
+}
+// responsive top-bar
+@media screen and (max-width: 540px) {
+  .top-bar-wrapper {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+}
+// courses and product
+@media screen and (min-width:560px) and (max-width: 769px) {
+  .courses-and-product-wrapper {
+    .courses-and-prod {
+      .row {
+        div {
+          // margin-bottom: 73px;
+          .courses-card {
+            width: 400px !important;
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
+}
