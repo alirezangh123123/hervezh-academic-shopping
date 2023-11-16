@@ -29,4 +29,4 @@ const product = [
     price: "رایگان",
   },
 ];
-export {product}
+export { product };

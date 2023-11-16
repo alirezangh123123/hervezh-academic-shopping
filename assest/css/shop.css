@@ -15,3 +15,9 @@
     justify-content: center !important;
   }
 }
+@media screen and (min-width: 560px) and (max-width: 769px) {
+  .courses-and-product-wrapper .courses-and-prod .row div .courses-card {
+    width: 400px !important;
+    margin: auto;
+  }
+}
