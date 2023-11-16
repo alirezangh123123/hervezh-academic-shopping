@@ -9,13 +9,62 @@
     <link rel="stylesheet" href="assest/css/swiper-bundle.css" />
     <link rel="stylesheet" href="assest/css/swipper.css" />
     <link rel="stylesheet" href="assest/css/style.css" />
-    <link rel="stylesheet" href="assest/css/shop.css">
+    <link rel="stylesheet" href="assest/css/shop.css" />
   </head>
-  <body>
-    
+  <body class="bg-light">
+    <!-- menu section -->
+    <section class="shop-container">
+      <header class="pb-4">
+        <navbar-tg></navbar-tg>
+        <div class="container">
+          <div class="row">
+            <div class="breadcrub-wrapper mt-4">
+              <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+                <ol class="breadcrumb d-flex justify-content-end me-3">
+                  <li class="breadcrumb-item active" aria-current="page">
+                    فروشگاه
+                  </li>
+                  <li class="breadcrumb-item text-white">
+                    <a href="index.html" class="text-white">صفحه اصلی</a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="courses-and-product-wrapper">
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-12 bg-white">
+                    <div class="top-bar-wrapper d-flex flex-wrap justify-content-between">
+                        <div class=" left-side-top-bar  p-3">
+                           <form  class="search-section ">
+                            <input type="search" class="search-prod text-end form-control rounded-0 form-control-lg pe-0 px-6" placeholder="...جستجو کنید" style="font-size: 15px;">
+                           </form>
+                        </div>
+                        <div class=" right-side-top-bar sort-product-section p-3">
+                            <div class="dropdown-center">
+                                <button class="btn btn-secondary px-3 py-2 rounded-0  d-flex align-items-center " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <i class="fa fa-arrow-down mx-2"></i> <span class=" mx-2">مرتب سازی بر اساس</span>
+                                </button>
+                                <ul class="dropdown-menu w-100 rounded-0">
+                                  <li><a class="dropdown-item text-end " href="#">تاریخ انتشار</a></li>
+                                  <li><a class="dropdown-item text-end " href="#">گرانترین</a></li>
+                                  <li><a class="dropdown-item text-end " href="#">ارزان ترین</a></li>
+                                </ul>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+    </section>
+    <!-- menu section -->
     <script src="assest/js/bootstrap.bundle.min.js"></script>
     <script src="assest/js/swiper-bundle.js"></script>
     <script src="assest/js/main.js"></script>
-    <script src="assest/js/main-shop.js"></script>
+    <script type="module" src="assest/js/main-shop.js"></script>
   </body>
 </html>
