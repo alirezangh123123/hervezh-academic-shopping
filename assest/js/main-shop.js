@@ -30,7 +30,7 @@ let setProductCard = product.forEach((item) => {
         </div>
       </div>
       <div
-        class="card-footer courses-card-footer d-flex justify-content-between"
+        class="card-footer bg-white courses-card-footer rounded-bottom-3 d-flex justify-content-between"
       >
         <span class="price">${item.price}</span>
         <span class="member">
