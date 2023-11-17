@@ -1,1 +1,78 @@
+table tbody td {
+  background-color: white;
+}
+table tbody td p a {
+  transition: all 0.3s;
+}
+table tbody td p a:hover {
+  color: var(--primary--);
+}
+table tbody td .img-cover-wrapper {
+  height: 70px !important;
+}
+table tbody td .img-cover-wrapper img {
+  height: 100%;
+}
 
+@media screen and (max-width: 560px) {
+  section.login-link div .row div h5 {
+    font-size: 19px !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  section.login-link div .row div h5 {
+    font-size: 14px !important;
+  }
+}
+@media screen and (max-width: 651px) {
+  table thead tr .cover-prod {
+    display: none !important;
+  }
+  table thead tr th {
+    font-size: 13px !important;
+  }
+  table tbody td.cover-wrapper {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  table thead tr th {
+    font-size: 11px !important;
+    font-weight: bold !important;
+  }
+  table tbody {
+    font-size: 12px !important;
+  }
+  table tbody td p {
+    font-size: 12px !important;
+    text-align: center !important;
+  }
+}
+.discount-form input:focus {
+  box-shadow: none !important;
+}
+
+@media screen and (max-width: 992px) {
+  .left-side {
+    width: 90% !important;
+  }
+  .left-side .update-prise-btn, .left-side .purchase-btn {
+    font-size: 14px !important;
+    padding: 10px 9px !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .left-side .update-prise-btn, .left-side .purchase-btn {
+    font-size: 11px !important;
+    padding: 10px 9px !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .right-side input {
+    font-size: 12px !important;
+  }
+  .right-side button {
+    font-size: 9px !important;
+    padding: 0px 7px !important;
+  }
+}
