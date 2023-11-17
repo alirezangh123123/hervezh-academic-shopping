@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سبد خرید</title>
+    <link rel="stylesheet" href="assest/css/font-awesome.css" />
+    <link rel="stylesheet" href="assest/css/bootstrap.css" />
+    <link rel="stylesheet" href="assest/css/swiper-bundle.css" />
+    <link rel="stylesheet" href="assest/css/swipper.css" />
+    <link rel="stylesheet" href="assest/css/style.css" />
+    <link rel="stylesheet" href="assest/css/cart.css" />
+  </head>
+  <body class="bg-light">
+    <section class="cart-container">
+      <header class="pb-4">
+        <section class="menu-wrapper">
+          <navbar-tg></navbar-tg>
+          <div class="container">
+            <div class="row">
+              <div class="breadcrub-wrapper mt-4">
+                <nav
+                  style="--bs-breadcrumb-divider: '<'"
+                  aria-label="breadcrumb"
+                >
+                  <ol class="breadcrumb d-flex justify-content-end me-3">
+                    <li class="breadcrumb-item active" aria-current="page">
+                      سبد خرید
+                    </li>
+                    <li class="breadcrumb-item text-white">
+                      <a href="shop.html" class="text-white">فروشگاه</a>
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
+      <section class="login-link mt-4">
+        <div
+          class="container p-3 rounded-2"
+          style="background-color: var(--lightShade--)"
+        >
+          <div class="row">
+            <div
+              class="col-12 isLogin-wrapper d-flex justify-content-end text-end align-items-center"
+            >
+              <h5>
+                قبلا ثبت نام کرده اید؟برای ورود<a
+                  href="#"
+                  class="fw-bold text-secondary px-1"
+                  >اینجا</a
+                >کلیک کنید
+              </h5>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="basket-list mt-5 text-end">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-12">
+              <table class="table basket-list-wrapper">
+                <thead class="border-bottom border-secondary">
+                  <tr>
+                    <th scope="col" style="width: 20%">مجموع</th>
+                    <th scope="col" style="width: 12%">تعداد</th>
+                    <th scope="col" style="width: 13%">قیمت</th>
+                    <th scope="col" style="width: 25%">عنوان محصول</th>
+                    <th class="cover-prod" scope="col" style="width: 20%">
+                      کاور محصول
+                    </th>
+                    <th scope="col" style="width: 10%"></th>
+                  </tr>
+                </thead>
+                <tbody class="">
+                  <tr class="item-wrapper">
+                    <td scope="row">
+                      <span class="align-middle d-inline-block mt-3"
+                        >119,000</span
+                      >
+                    </td>
+                    <td>
+                      <input
+                        class="border my-auto mt-3"
+                        min="1"
+                        style="width: 40px"
+                        type="number"
+                        value="1"
+                      />
+                    </td>
+                    <td>
+                      <span class="align-middle d-inline-block mt-3"
+                        >19,000</span
+                      >
+                    </td>
+                    <td>
+                      <p class="text-secondary my-auto py-3">
+                        <a href="#"> دوره آموزشی گوگل آنالیتیکس </a>
+                      </p>
+                    </td>
+
+                    <td class="cover-wrapper">
+                      <div class="img-cover-wrapper">
+                        <img
+                          src="assest/img/google-analytics-1-500x500.png"
+                          alt=""
+                          class="img-fluid"
+                        />
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        class="close-icon-wrapper d-flex my-auto justify-content-center align-items-center mt-3"
+                      >
+                        <button
+                          class="btn p-0 d-flex align-items-center justify-content-center"
+                        >
+                          <i
+                            class="fa fa-times-circle align-middle"
+                            style="
+                              font-size: 25px;
+                              width: 100%;
+                              color: rgb(186, 9, 9);
+                            "
+                          ></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="col-md-7 left-side order-sm-2 order-lg-1 w-50 ms-lg-3 bg-white rounded-0 p-3 d-flex flex-column justify-content-between"
+            >
+              <div
+                class="sum-quantity d-flex justify-content-between px-6 my-3"
+              >
+                <span>۳</span>
+                <span>:تعداد کل</span>
+              </div>
+
+              <div class="sum-prises d-flex justify-content-between px-6 my-3">
+                <span>۲۵۶,۰۰۰</span>
+                <span>:قیمت کل</span>
+              </div>
+              <div
+                class="final-purchase-btn-wrapper mt-3 d-flex justify-content-around"
+              >
+                <button
+                  class="btn update-prise-btn btn-primary rounded-0 px-sm-0 py-sm-0 px-lg-4 py-lg-3"
+                >
+                  پرداخت نهایی
+                </button>
+                <button
+                  class="btn purchase-btn btn-dark rounded-0 px-sm-0 py-sm-0 px-lg-4 py-lg-3"
+                >
+                  بروزرسانی سبد خرید
+                </button>
+              </div>
+            </div>
+            <div
+              class="col-md-5 right-side order-sm-1 order-lg-2 mt-3 mb-sm-3 mb-lg-0"
+            >
+              <div class="discount-wrapper px-lg-6">
+                <form class="discount-form d-flex">
+                  <button
+                    type="submit"
+                    class="btn btn-dark text-white me-1"
+                    style="border-radius: 4px"
+                  >
+                    اعمال کد
+                  </button>
+                  <input
+                    type="text"
+                    class="form-control w-75 rounded-0 text-end py-3"
+                    placeholder="... کد تخفیف"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <script src="assest/js/bootstrap.bundle.min.js"></script>
+    <script src="assest/js/swiper-bundle.js"></script>
+    <script src="assest/js/main.js"></script>
+    <script type="module" src="assest/js/cart.js"></script>
+  </body>
+</html>
