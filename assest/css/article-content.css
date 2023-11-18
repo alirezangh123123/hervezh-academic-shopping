@@ -1,0 +1,39 @@
+main .side-bar-wrapper div form.search-form-section input:focus {
+  box-shadow: none !important;
+}
+main .side-bar-wrapper div form.search-form-section i {
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+}
+main .side-bar-wrapper div.side-bar-catagory-inner span {
+  margin-right: 12px !important;
+  width: 90% !important;
+  padding: 2px 9px;
+  margin-top: 14px;
+  display: inline-block;
+}
+main .side-bar-wrapper div.side-bar-catagory-inner span span.sub-border-catagory {
+  width: 100% !important;
+  display: flex;
+  margin-top: 5px;
+  height: 2px !important;
+  margin-left: auto;
+  background-color: var(--primary--) !important;
+}
+main .side-bar-wrapper div.side-bar-catagory-inner ul li {
+  transition: all 0.3s;
+}
+main .side-bar-wrapper div.side-bar-catagory-inner ul li:hover {
+  background-color: var(--primary--);
+}
+main .side-bar-wrapper div.side-bar-catagory-inner ul li:hover a {
+  color: var(--white--);
+}
+main .side-bar-wrapper div.side-bar-catagory-inner ul li a {
+  transition: all 0.3s;
+}
+
+.form-comment-container form textarea:focus {
+  outline: none !important;
+}

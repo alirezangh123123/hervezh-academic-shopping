@@ -52,6 +52,11 @@ $nav-link-color: #7d7d7d;
 $nav-link-font-weight: bold;
 // dropdown
 $dropdown-item-padding-y: $spacer * 0.5;
-$dropdown-link-hover-color:  #ffffff;
-$dropdown-link-hover-bg:#ffc107;
+$dropdown-link-hover-color: #ffffff;
+$dropdown-link-hover-bg: #ffc107;
+// form-control option
+$input-focus-box-shadow: none;
+$form-check-input-checked-bg-color: #ffc107;
+$form-check-input-focus-box-shadow:none;
+$form-check-input-focus-border:none;
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
