@@ -1,53 +1,53 @@
-main {
-  .side-bar-wrapper {
-    div {
-      form.search-form-section {
-        input {
-          &:focus {
-            box-shadow: none !important;
-          }
-        }
-        i {
-          top: 50%;
-          left: 8%;
-          transform: translateY(-50%);
-        }
-      }
-    }
-    div.side-bar-catagory-inner {
-      span {
-        margin-right: 12px !important;
-        width: 90% !important;
-        padding: 2px 9px;
-        margin-top: 14px;
-        display: inline-block;
-        span.sub-border-catagory {
-          width: 100% !important;
-          display: flex;
-          margin-top: 5px;
-          height: 2px !important;
-          margin-left: auto;
-          background-color: var(--primary--) !important;
-        }
-      }
-      ul {
-        li {
-          transition: all 0.3s;
+// main {
+//   .side-bar-wrapper {
+//     div {
+//       form.search-form-section {
+//         input {
+//           &:focus {
+//             box-shadow: none !important;
+//           }
+//         }
+//         i {
+//           top: 50%;
+//           left: 8%;
+//           transform: translateY(-50%);
+//         }
+//       }
+//     }
+//     div.side-bar-catagory-inner {
+//       span {
+//         margin-right: 12px !important;
+//         width: 90% !important;
+//         padding: 2px 9px;
+//         margin-top: 14px;
+//         display: inline-block;
+//         span.sub-border-catagory {
+//           width: 100% !important;
+//           display: flex;
+//           margin-top: 5px;
+//           height: 2px !important;
+//           margin-left: auto;
+//           background-color: var(--primary--) !important;
+//         }
+//       }
+//       ul {
+//         li {
+//           transition: all 0.3s;
 
-          &:hover {
-            background-color: var(--primary--);
-          }
-          &:hover a {
-            color: var(--white--);
-          }
-          a {
-            transition: all 0.3s;
-          }
-        }
-      }
-    }
-  }
-}
+//           &:hover {
+//             background-color: var(--primary--);
+//           }
+//           &:hover a {
+//             color: var(--white--);
+//           }
+//           a {
+//             transition: all 0.3s;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 // comment section stlyes
 .form-comment-container{
     form{
