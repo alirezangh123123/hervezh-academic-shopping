@@ -6,6 +6,7 @@ import { Aside } from "../component/aside-section-col-3/aside.js";
 import { articles } from "../db/article.js";
 window.customElements.define("navbar-tg", NavBar);
 window.customElements.define("aside-tg", Aside);
+window.customElements.define("footer-tg", Footer);
 const articleWrapper = $.getElementById("article-card-container");
 
 let appendArticlesInDom = articles.forEach((items) => {
