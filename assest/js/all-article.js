@@ -7,6 +7,7 @@ import { articles } from "../db/article.js";
 window.customElements.define("navbar-tg", NavBar);
 window.customElements.define("aside-tg", Aside);
 window.customElements.define("footer-tg", Footer);
+window.customElements.define("top-tg", TopBtn);
 const articleWrapper = $.getElementById("article-card-container");
 
 let appendArticlesInDom = articles.forEach((items) => {
