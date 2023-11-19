@@ -1,0 +1,13 @@
+@media screen and (min-width: 560px) and (max-width: 769px) {
+  .all-article-card-wrapper {
+    .row {
+      div {
+        // margin-bottom: 73px;
+        .all-article-card {
+          width: 400px !important;
+          margin: auto;
+        }
+      }
+    }
+  }
+}

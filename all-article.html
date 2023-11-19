@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assest/css/style.css" />
     <link rel="stylesheet" href="assest/css/all-article.css" />
   </head>
-  <body>
+  <body class="bg-light">
     <section class="all-article-container">
       <header class="pb-3">
         <navbar-tg></navbar-tg>
@@ -39,6 +39,21 @@
           </div>
         </div>
       </header>
+      <main class="main-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 order-sm-2 order-md-1 mt-4">
+              <aside-tg></aside-tg>
+            </div>
+            <div
+              class="col-md-9 order-sm-1 order-md-2 mt-4 all-article-card-wrapper"
+              dir="rtl"
+            >
+              <div class="row" id="article-card-container"></div>
+            </div>
+          </div>
+        </div>
+      </main>
     </section>
     <script src="assest/js/bootstrap.bundle.min.js"></script>
     <script src="assest/js/swiper-bundle.js"></script>
