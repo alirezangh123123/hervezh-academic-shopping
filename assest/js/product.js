@@ -6,6 +6,9 @@ import { TopBtn } from "../component/go-top-btn/go-top-btn.js";
 window.customElements.define("navbar-tg", NavBar);
 window.customElements.define("footer-tg", Footer);
 window.customElements.define("top-tg", TopBtn);
+// content of each product
+
+// product slider
 var swiper = new Swiper(".relateSwiper", {
   grabCursor: true,
   // centeredSlides: true,
