@@ -346,12 +346,12 @@ button.swiper-pagination-bullet {
   --primary--: #ffc107;
   --white--: #ffffff;
   --light--: #ececec;
-  --lightShade--:#d6d2d2;
+  --lightShade--: #d6d2d2;
   --dark--: #1f1f1f;
   --gray--: #7d7d7d;
   --blueShade--: #1f2042;
   --blueLink--: #0b11b9;
-  --lightGreen--:rgb(26, 167, 26);
+  --lightGreen--: rgb(26, 167, 26);
 }
 
 * {
@@ -511,4 +511,36 @@ section.property-courses .property-text-wrapper .about-our-plan-2 svg.svg-icon-2
   width: 120px;
   height: 150px;
   padding-left: 20px;
+}
+
+form.search-field-form ul.suggest-list {
+  width: 73% !important;
+  display: none;
+  visibility: hidden;
+  margin-top: -20px;
+}
+form.search-field-form ul.suggest-list li {
+  position: relative;
+  transition: all 0.3s;
+  z-index: 999 !important;
+  background-color: var(--white--);
+}
+form.search-field-form ul.suggest-list li:hover {
+  background-color: var(--primary--);
+  color: var(--white--);
+}
+form.search-field-form ul.suggest-list li:hover a {
+  color: var(--white--);
+}
+form.search-field-form ul.suggest-list li a {
+  width: 100%;
+  transition: inherit;
+}
+form.search-field-form ul.suggest-list li i {
+  z-index: 1000000 !important;
+  cursor: pointer;
+}
+form.search-field-form ul.active {
+  display: block;
+  visibility: visible;
 }

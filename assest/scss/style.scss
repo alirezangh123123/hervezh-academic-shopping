@@ -27,12 +27,12 @@
   --primary--: #ffc107;
   --white--: #ffffff;
   --light--: #ececec;
-  --lightShade--:#d6d2d2;
+  --lightShade--: #d6d2d2;
   --dark--: #1f1f1f;
   --gray--: #7d7d7d;
   --blueShade--: #1f2042;
   --blueLink--: #0b11b9;
-  --lightGreen--:rgb(26, 167, 26);
+  --lightGreen--: rgb(26, 167, 26);
 }
 * {
   font-family: shabnam;
@@ -252,5 +252,41 @@ section.property-courses {
         padding-left: 20px;
       }
     }
+  }
+}
+// search- input style
+form.search-field-form {
+ 
+  ul.suggest-list {
+    width: 73% !important;
+    display: none;
+    visibility: hidden;
+    margin-top: -20px;
+    li{
+position: relative;
+      transition: all 0.3s;
+      z-index: 999 !important;
+      background-color: var(--white--);
+      &:hover {
+        background-color: var(--primary--);
+        color: var(--white--);
+      }
+      &:hover a {
+        color: var(--white--);
+      }
+      a {
+        width: 100%;
+        transition: inherit;
+      }
+      i{
+        z-index: 1000000 !important;
+        cursor: pointer;
+      }
+    }
+  
+  }
+  ul.active{
+    display: block;
+    visibility: visible;
   }
 }
