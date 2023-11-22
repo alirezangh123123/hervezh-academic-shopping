@@ -31,26 +31,37 @@
                 تیم آموزشی تشکیل شده از بهترین اساتید
               </p>
               <form
-                class="w-100 search-form ms-auto d-flex flex-column align-items-end"
+                class="w-100 search-field-form search-form ms-auto d-flex flex-column align-items-end"
               >
                 <div class="input-group w-100 mb-3 rounded-3">
                   <button
                     class="btn btn-primary"
                     type="submit"
-                    id="button-addon1"
+                    id="sub-form-btn"
                   >
+                  <a href="#">
                     جستجو
+
+                  </a>
                   </button>
+
                   <input
                     type="search"
                     class="form-control search-header-input form-control-lg py-3"
-                    id="search-inp"
+                    fa fa-close close-btn     id="search-field-inp"
                     placeholder="چی میخوای یاد بگیری...؟"
                     aria-label="Example text with button addon"
                     aria-describedby="button-addon1"
                     style="text-align: right"
+                    autocomplete="off"
                   />
                 </div>
+                <ul
+                  class="py-2 me-3 text-end pe-2 suggest-list list-unstyled text-dark"
+                id="suggest-list"
+                  >
+           
+                </ul>
               </form>
             </div>
             <div class="col-md-5 header-img-wrapper order-sm-1 order-md-2">
