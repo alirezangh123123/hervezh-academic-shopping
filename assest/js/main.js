@@ -77,7 +77,7 @@ const getSearchINp = $.getElementById("search-field-inp");
 const getSubFormBtn = $.getElementById("sub-form-btn");
 const getLIst = $.getElementById("suggest-list");
 let showSuggestions = () => {
-  let getInpValue = getSearchINp.value.trim().toUpperCase();
+  let getInpValue = getSearchINp.value.trim();
   let getResult = product.filter((product) => {
     if (product.title.includes(getInpValue)) {
       return product.title;
