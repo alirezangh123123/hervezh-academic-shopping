@@ -38,7 +38,7 @@ let articeSlider = articles.forEach((article) => {
         </span>
       </div>
       <div class="btn-article-wrapper text-white d-flex justify-content-center mb-n4">
-        <button class="btn btn-primary "><a href="#" class="text-white">ادامه مطلب</a></button>
+        <button class="btn btn-primary "><a href="article-content.html?id=${article.id}" class="text-white">ادامه مطلب</a></button>
       </div>
     </div>
   </div>
