@@ -34,20 +34,34 @@
         </div>
       </header>
       <section class="courses-and-product-wrapper">
-        <div class="container mt-4">
-          <div class="row">
+        <div class="container mt-4 mb-7" style="height: 70px">
+          <div class="row d-flex align-items-center">
             <div class="col-12 bg-white rounded-2">
               <div
                 class="top-bar-wrapper d-flex flex-wrap justify-content-between"
               >
-                <div class="left-side-top-bar p-3">
-                  <form class="search-section">
-                    <input
-                      type="search"
-                      class="search-prod text-end form-control rounded-0 form-control-lg pe-0 px-6"
-                      placeholder="...جستجو کنید"
-                      style="font-size: 15px"
-                    />
+                <div class="left-side-top-bar py-1">
+                  <form class="w-100 search-section search-field-form">
+                    <div class="w-100 input-wrapper position-relative">
+                      <a
+                        href="#"
+                        class="target-link-location position-absolute z-3"
+                      >
+                        <i class="fa fa-magnifying-glass"></i>
+                      </a>
+                      <input
+                        type="search"
+                        id="search-field"
+                        class="form-control search-header-input form-control-lg py-3 search-prod text-end form-control rounded-0 form-control-lg pe-0 px-6"
+                        placeholder="...جستجو کنید"
+                        style="font-size: 15px"
+                        autocomplete="off"
+                      />
+                    </div>
+                    <ul
+                      class="z-4 w-100 py-2 me-3 text-end pe-2 suggest-list list-unstyled d-flex flex-column align-items-start text-dark"
+                      id="suggest-list"
+                    ></ul>
                   </form>
                 </div>
                 <div class="right-side-top-bar sort-product-section p-3">
@@ -82,7 +96,10 @@
             </div>
           </div>
         </div>
-        <div class="container mt-6 courses-and-prod">
+        <div
+          class="container mt-sm-9 mt-md-6 courses-and-prod"
+          style="z-index: -1000"
+        >
           <div class="row" id="prodWrapper"></div>
         </div>
       </section>
