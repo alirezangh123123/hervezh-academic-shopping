@@ -131,7 +131,7 @@ getSubFormBtn.addEventListener("click", (event) => {
   event.preventDefault();
   let findAddress = $.querySelector("a.target-link");
   let correctLink = findAddress.href;
-  // location.href = correctLink;
+  location.href = correctLink;
 console.log(correctLink);
 console.log(findAddress);
 });
