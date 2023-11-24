@@ -93,7 +93,7 @@ let showSuggestions = () => {
       let liElem, linkElem, labelElem;
       liElem = $.createElement("li");
       liElem.className =
-        "suggest-item py-2 mb-1 border-bottom d-flex justify-content-around align-items-center px-3";
+        "suggest-item py-2 border-bottom d-flex justify-content-around align-items-center px-3";
       linkElem = $.createElement("a");
       if (target.label == "#مقاله") {
         linkElem.setAttribute("href", `article-content.html?id=${target.id}`);
@@ -103,7 +103,8 @@ let showSuggestions = () => {
       linkElem.textContent = target.title;
       linkElem.className = "target-link";
       labelElem = $.createElement("label");
-      labelElem.className = "w-25 text-dark text-start";
+      labelElem.className = " text-dark text-start";
+      labelElem.style.width = "60%";
       labelElem.textContent = target.label;
       liElem.append(labelElem, linkElem);
       getLIst.append(liElem);
