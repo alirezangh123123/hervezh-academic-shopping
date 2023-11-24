@@ -5,6 +5,7 @@ import { productSlider } from "./course-slider.js";
 import { Footer } from "../component/footer/footer.js";
 import { TopBtn } from "../component/go-top-btn/go-top-btn.js";
 import { product } from "../db/product.js";
+import { articles } from "../db/article.js";
 window.customElements.define("navbar-tg", NavBar);
 window.customElements.define("footer-tg", Footer);
 window.customElements.define("top-tg", TopBtn);
@@ -71,14 +72,16 @@ var blogBoxSwiper = new Swiper(".article-swiper", {
     },
   },
 });
+// concatination products and articles
+let allDatas = product.concat(articles);
 //search-section form
 const getForm = $.getElementsByClassName("search-field-form");
 const getSearchINp = $.getElementById("search-field-inp");
 const getSubFormBtn = $.getElementById("sub-form-btn");
 const getLIst = $.getElementById("suggest-list");
 let showSuggestions = () => {
-  let getInpValue = getSearchINp.value.trim();
-  let getResult = product.filter((product) => {
+  let getInpValue = getSearchINp.value.toUpperCase().trim();
+  let getResult = allDatas.filter((product) => {
     if (product.title.includes(getInpValue)) {
       return product.title;
     }
@@ -87,15 +90,22 @@ let showSuggestions = () => {
     getLIst.innerHTML = "";
     // make list stracture
     getResult.map((target) => {
-      let liElem, linkElem;
+      let liElem, linkElem, labelElem;
       liElem = $.createElement("li");
       liElem.className =
         "suggest-item py-2 mb-1 border-bottom d-flex justify-content-around align-items-center px-3";
       linkElem = $.createElement("a");
-      linkElem.setAttribute("href", `product.html?id=${target.id}`);
+      if (target.label == "#مقاله") {
+        linkElem.setAttribute("href", `article-content.html?id=${target.id}`);
+      } else {
+        linkElem.setAttribute("href", `product.html?id=${target.id}`);
+      }
       linkElem.textContent = target.title;
       linkElem.className = "target-link";
-      liElem.append(linkElem);
+      labelElem = $.createElement("label");
+      labelElem.className = "w-25 text-dark text-start";
+      labelElem.textContent = target.label;
+      liElem.append(labelElem, linkElem);
       getLIst.append(liElem);
     });
   }
@@ -111,6 +121,7 @@ let showSuggestions = () => {
       event.preventDefault();
       getSearchINp.value = textContent;
       getLIst.classList.remove("active");
+      getLIst.innerHTML  = item.innerHTML
     });
   });
 };
