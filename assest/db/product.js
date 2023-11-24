@@ -2,6 +2,7 @@ let $ = document;
 const product = [
   {
     id: 1,
+    label:"#دوره آموزشی",
     title: "دوره آموزش گوگل آنالیتیکس",
     cover: `assest/img/google-analytics-1-500x500.png`,
     member: 543,
@@ -69,6 +70,7 @@ const product = [
   },
   {
     id: 2,
+    label:"#دوره آموزشی",
     title: "دوره افزایش سرعت سایت",
     cover: `assest/img/website-speed-1-500x500.png`,
     member: 453,
@@ -128,6 +130,7 @@ const product = [
   },
   {
     id: 3,
+    label:"#دوره آموزشی",
     title: "آموزش ایمیل مارکتینگ",
     cover: `assest/img/email-marketing-500x500.jpg`,
     member: 943,
@@ -192,6 +195,7 @@ const product = [
   },
   {
     id: 4,
+    label:"#دوره آموزشی",
     title: "آموزش کامل سرچ گوگل",
     cover: `assest/img/google-search-console-1-500x500.png`,
     member: 843,
@@ -259,6 +263,7 @@ const product = [
   },
   {
     id: 5,
+    label:"#دوره آموزشی",
     title: "HTML و CSS دوره آموزش ",
     cover: "assest/img/html,css.jpg",
     member: 543,
@@ -323,6 +328,7 @@ const product = [
   },
   {
     id: 6,
+    label:"#دوره آموزشی",
     title: "دوره رشد مهارت‌های نرم در زندگی",
     cover: "assest/img/soft-skill.jpg",
     member: 200,
@@ -385,6 +391,7 @@ const product = [
   },
   {
     id: 7,
+    label:"#دوره آموزشی",
     title: "دوره آموزشی مهارت تندخوانی و تقویت حافظه",
     cover: "assest/img/speed-reading.jpg",
     member: 130,
@@ -448,6 +455,7 @@ const product = [
   },
   {
     id: 8,
+    label:"#دوره آموزشی",
     title: "دوره آموزشی NPM در برنامه نویسی",
     cover: "assest/img/npm.jpg",
     member: 150,
