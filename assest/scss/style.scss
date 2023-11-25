@@ -41,37 +41,6 @@ a {
   text-decoration: none;
   color: var(--dark--);
 }
-// responsive header height
-@media screen and (min-width: 970px) and (max-width: 1200px) {
-  header {
-    height: 692px !important;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 970px) {
-  header {
-    height: 526px !important;
-  }
-}
-@media screen and (min-width: 826px) and (max-width: 973px) {
-  header {
-    height: 612px !important;
-  }
-}
-@media screen and (max-width: 768px) {
-  header {
-    height: 1080px !important;
-  }
-}
-@media screen and (min-width: 520px) and (max-width: 627px) {
-  header {
-    height: 1020px !important;
-  }
-}
-@media screen and (max-width: 510px) {
-  header {
-    height: auto !important;
-  }
-}
 // bg-header
 header {
   background: url(../img/page-bg.jpg) center center no-repeat;
