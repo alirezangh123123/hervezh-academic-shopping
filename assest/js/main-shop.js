@@ -24,7 +24,7 @@ let setProductCard = product.forEach((item) => {
       </div>
       <div class="card-body courses-card-body">
         <div class="custom-card-title text-center">
-          <a href="#" class="fw-bold text-dark"
+          <a href="product.html?id=${item.id}" class="fw-bold text-dark"
             >${item.title}</a
           >
         </div>
@@ -58,7 +58,7 @@ let startSearch = () => {
     if (data.title.includes(searchInpValue)) {
       return data.title;
     }
-  });
+  }).slice(0,5);;
 
   if (searchData) {
     suggestionList.innerHTML = "";

@@ -85,7 +85,7 @@ let showSuggestions = () => {
     if (product.title.includes(getInpValue)) {
       return product.title;
     }
-  });
+  }).slice(0,5);
   if (getResult) {
     getLIst.innerHTML = "";
     // make list stracture
