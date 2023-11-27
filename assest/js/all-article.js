@@ -48,7 +48,7 @@ let appendArticlesInDom = articles.forEach((items) => {
                         class="btn-article-wrapper text-white d-flex justify-content-center mb-n4"
                       >
                         <button class="btn btn-primary">
-                          <a href="#" class="text-white">ادامه مطلب</a>
+                          <a href="article-content.html?id=${items.id}" class="text-white">ادامه مطلب</a>
                         </button>
                       </div>
                     </div>

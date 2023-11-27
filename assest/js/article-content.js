@@ -25,17 +25,17 @@ if(setSameData){
     alt="..."
   />
   <div class="card-img-overlay d-sm-none d-md-block">
-    <h4 class="card-title text-dark text-end mt-3">
+    <h4 class="card-title py-2 px-1 ms-auto rounded-1 mt-3 bg-dark text-white" style="width:max-content;">
     ${setSameData.title}
     </h4>
-    <p class="card-text text-dark d-flex align-items-center">
+    <p class="card-text text-dark d-flex align-items-center  text-white px-2 py-1 rounded-1 bg-dark" style="width:max-content;" >
       <i class="fa fa-clock pe-2"></i>
       <span> ${setSameData.publishDate}</span>
     </p>
-    <p class="card-text text-dark" style="font-size: 19px">
-      <small>
+    <p class="card-text text-white" style="font-size: 19px">
+      <small class="bg-dark px-2 py-1 rounded-1">
         <i
-          class="fa fa-circle text-primary me-2"
+          class="fa fa-circle text-primary me-2  "
           style="font-size: 17px"
         ></i>
        ${setSameData.articleCategory}
