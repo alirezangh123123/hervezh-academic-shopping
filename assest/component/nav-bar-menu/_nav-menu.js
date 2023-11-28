@@ -86,7 +86,7 @@ navBarTemplate.innerHTML = `
  
 
         <div class="col-md-2 basket ms-4">
-          <a href="" class="basket-link">
+          <a href="../../../cart.html" class="basket-link">
             <i
               class="fa fa-shopping-bag position-relative text-dark"
               style="font-size: 22px"

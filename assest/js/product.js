@@ -93,8 +93,8 @@ if (showCorrectProdInDom) {
           style="position: absolute; bottom: 20%"
         >
           <div class="col-lg-6 w-50">
-            <button class="btn w-75 btn-success btn-lg">
-              <a href="#" class="text-white"></a>افزودن به سبد خرید</a>
+            <button class="btn w-75 btn-success btn-lg add-to-cart-btn">
+              <a href="#" class="text-white "></a>افزودن به سبد خرید</a>
             </button>
           </div>
           <div class="col-lg-6 w-50">
@@ -127,7 +127,7 @@ if (showCorrectProdInDom) {
             class="d-flex justify-content-center mt-2 w-100 d-sm-flex d-lg-none"
           >
             <button class="btn btn-primary rounded-1 w-100">
-              <a href="#" class="text-white">شرکت در دوره</a>
+              <a href="#" class="text-white add-to-cart-btn">شرکت در دوره</a>
             </button>
           </div>
         </div>
@@ -1393,3 +1393,27 @@ var swiper = new Swiper(".relateSwiper", {
     },
   },
 });
+let addToBasketBtn = $.querySelectorAll(".add-to-cart-btn");
+addToBasketBtn.forEach((btn) => {
+  btn.addEventListener("click", (clickEvent) => {
+   PostToBasket()
+  });
+});
+let PostToBasket = async () => {
+  try {
+    let fetchData = await fetch(
+      "https://login-project-e1aca-default-rtdb.firebaseio.com/userBasket.json",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(showCorrectProdInDom),
+      }
+    );
+    let showResult = await fetchData.json();
+    console.log(showResult);
+  } catch (e) {
+    console.log("shomething is wrong", e);
+  }
+};
