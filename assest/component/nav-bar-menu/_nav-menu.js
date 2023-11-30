@@ -91,12 +91,13 @@ navBarTemplate.innerHTML = `
               class="fa fa-shopping-bag position-relative text-dark"
               style="font-size: 22px"
               ><em
-                class="text-primary position-absolute rounded-circle item-counter d-flex flex-column justify-content-center align-items-center rounded-circle"
+                class="latin-numbers text-primary  position-absolute rounded-circle item-counter d-flex flex-column justify-content-center align-items-center rounded-circle"
                 style="
                   width: 10px;
                   height: 11px;
-                  top: 69%;
-                  font-size: 25px;
+                  top: 40%;
+                  font-size: 19px;
+                  
                 "
                 >0</em
               ></i
@@ -301,6 +302,20 @@ class NavBar extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.append(navBarTemplate.content.cloneNode(true));
+    //set item-counter
+    this.shadowRoot.querySelector(".item-counter");
+    fetch(
+      "https://userbasketproject-default-rtdb.firebaseio.com/userBasketCart.json"
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        this.changetToArray = Object.entries(data);
+        console.log(
+          (this.shadowRoot.querySelector(".item-counter").textContent =
+            this.changetToArray.length)
+        );
+      });
+
     // mobile-menu
     this.shadowRoot
       .querySelector(".menu_icon")
