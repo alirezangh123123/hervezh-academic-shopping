@@ -5,6 +5,7 @@ window.customElements.define("navbar-tg", NavBar);
 window.customElements.define("footer-tg", Footer);
 const cartDataWrapper = $.querySelector(".basket-list-wrapper");
 let getAllBasketPriceWrapper = $.querySelector(".sum-prises .price-number");
+let getAllQauntityBaket  = $.querySelector(".sum-quantity .q-number")
 let getPreLoadWrapper = $.getElementsByClassName("preload-container");
 let changeToArray;
 let fetchData;
@@ -16,7 +17,6 @@ let getDataFromBasket = async () => {
     let getResponse = await fetchData.json();
     changeToArray = Object.entries(getResponse);
     changeToArray.forEach((item) => {
-      console.log(item[1].id);
       const cardHtmlTemplate = `
         <tbody class="">
               <tr class="item-wrapper">
@@ -108,6 +108,12 @@ let calcTotalBasketPrice = () => {
     return acc + itemQuantity * itemPrice;
   }, 0);
   getAllBasketPriceWrapper.textContent = calcFinalPrice.toLocaleString(`us-en`);
+  let calcFinalQuatity = changeToArray.reduce((acc,item)=>{
+
+    let finalQuantity = item[1].quantity;
+    return acc + finalQuantity; 
+  },0)
+  getAllQauntityBaket.textContent = calcFinalQuatity.toLocaleString(`us-en`);
 };
 let DelItem = async (itemId) => {
   try {
