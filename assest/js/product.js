@@ -8,6 +8,8 @@ window.customElements.define("navbar-tg", NavBar);
 window.customElements.define("footer-tg", Footer);
 window.customElements.define("top-tg", TopBtn);
 const headerProduct = $.getElementById("header-product");
+let changeToArray;
+let basketSet = new Set();
 const productDescription = $.getElementsByClassName(
   "whole-product-container"
 )[0];
@@ -17,7 +19,6 @@ let setProductId = locationParams.get(`id`);
 let showCorrectProdInDom = product.find((product) => {
   return product.id === Number(setProductId);
 });
-console.log(showCorrectProdInDom);
 if (showCorrectProdInDom) {
   headerProduct.insertAdjacentHTML(
     "beforeend",
@@ -29,11 +30,9 @@ if (showCorrectProdInDom) {
         <nav
           class="text-white me-sm-3 me-md-6 me-lg-0"
           style="--bs-breadcrumb-divider: '>'"
-          aria-label="breadcrumb"
-        >
+          aria-label="breadcrumb">
           <ol
-            class="breadcrumb mt-3 d-flex justify-content-end align-items-center"
-          >
+            class="breadcrumb mt-3 d-flex justify-content-end align-items-center">
             <li class="breadcrumb-item active" aria-current="page">
               صفحه محصول
             </li>
@@ -44,21 +43,17 @@ if (showCorrectProdInDom) {
         </nav>
       </div>
       <div class="col-lg-7 product-selling-info course-intro-info">
-        <h4
-          class="fw-bold text-white text-center order-sm-2 order-md-1 mt-3 d-sm-none d-lg-block"
-        >
+        <h4 class="fw-bold text-white text-center order-sm-2 order-md-1 mt-3 d-sm-none d-lg-block">
           ${showCorrectProdInDom.title}
         </h4>
         <div
-          class="course-intro-selling-info course-intro-selling-info d-flex my-auto d-sm-none d-lg-flex"
-        >
+          class="course-intro-selling-info course-intro-selling-info d-flex my-auto d-sm-none d-lg-flex">
           <svg class="svg svg--full">
             <use xlink:href="#svg_price-ticket">
               <svg id="svg_price-ticket" viewBox="0 0 462 103.7">
                 <g
                   id="Group_5101"
-                  transform="translate(-11249.401 1012)"
-                >
+                  transform="translate(-11249.401 1012)">
                   <path
                     d="M11709.9-971.2h1.4v-36.9c0-2.2-1.8-4-4-4h-454c-2.2 0-4 1.8-4 4v36.8h1c5.9.2 10.7 5.1 10.7 11s-4.7 10.8-10.7 11h-1v36.9c0 2.2 1.8 4 4 4h454c2.2 0 4-1.8 4-4v-37l-1.1.1h-.4c-6.1 0-11-4.9-11-11 .1-5.9 5.1-10.9 11.1-10.9zm-13 11c0 7 5.6 12.7 12.5 13v34.9c0 1.1-.9 2-2 2h-454c-1.1 0-2-.9-2-2v-34.9c6.5-.7 11.7-6.3 11.6-12.9 0-6.7-5.1-12.3-11.6-12.9v-34.9c0-1.1.9-2 2-2h454c1.1 0 2 .9 2 2v34.8c-6.9.2-12.5 5.9-12.5 12.9z"
                   ></path>
@@ -93,8 +88,8 @@ if (showCorrectProdInDom) {
           style="position: absolute; bottom: 20%"
         >
           <div class="col-lg-6 w-50">
-            <button class="btn w-75 btn-success btn-lg">
-              <a href="#" class="text-white"></a>افزودن به سبد خرید</a>
+            <button class="btn w-75 btn-success btn-lg add-to-cart-btn" aria-label="${showCorrectProdInDom.id}">
+              افزودن به سبد خرید
             </button>
           </div>
           <div class="col-lg-6 w-50">
@@ -126,9 +121,7 @@ if (showCorrectProdInDom) {
           <div
             class="d-flex justify-content-center mt-2 w-100 d-sm-flex d-lg-none"
           >
-            <button class="btn btn-primary rounded-1 w-100">
-              <a href="#" class="text-white">شرکت در دوره</a>
-            </button>
+            <button class="btn btn-primary text-white rounded-1 w-100 add-to-cart-btn" aria-label="${showCorrectProdInDom.id}">شرکت در دوره</button>
           </div>
         </div>
       </div>
@@ -1393,3 +1386,38 @@ var swiper = new Swiper(".relateSwiper", {
     },
   },
 });
+function isProductInBasket(productId) {
+  return basketSet.has(productId);
+}
+let addToBasketBtn = $.querySelectorAll(".add-to-cart-btn");
+addToBasketBtn.forEach((btn) => {
+  btn.addEventListener("click", (clickEvent) => {
+    clickEvent.preventDefault();
+    let getId = parseInt(clickEvent.target.getAttribute("aria-label"));
+    PostToBasket(clickEvent.target);
+  });
+});
+let PostToBasket = async (targetBtn) => {
+  try {
+    let productId = targetBtn.getAttribute("aria-label");
+    if (!isProductInBasket(productId)) {
+      basketSet.add(productId);
+      let fetchData = await fetch(
+        "https://userbasketproject-default-rtdb.firebaseio.com/userBasketCart.json",
+        {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(showCorrectProdInDom),
+        }
+      );
+      let showResult = await fetchData.json();
+      console.log(showResult);
+    } else {
+      console.log("محصول تکراری است.");
+    }
+  } catch (e) {
+    console.log("something is wrong", e);
+  }
+};
