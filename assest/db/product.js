@@ -2,6 +2,8 @@ let $ = document;
 const product = [
   {
     id: 1,
+    quantity:1,
+    status:true,
     label: "#دوره آموزشی",
     title: "دوره آموزش گوگل آنالیتیکس",
     cover: `assest/img/google-analytics-1-500x500.png`,
@@ -70,6 +72,8 @@ const product = [
   },
   {
     id: 2,
+    quantity:1,
+    status:true,
     label: "#دوره آموزشی",
     title: "دوره افزایش سرعت سایت",
     cover: `assest/img/website-speed-1-500x500.png`,
@@ -130,6 +134,8 @@ const product = [
   },
   {
     id: 3,
+    quantity:1,
+    status:true,
     label: "#دوره آموزشی",
     title: "آموزش ایمیل مارکتینگ",
     cover: `assest/img/email-marketing-500x500.jpg`,
@@ -195,6 +201,8 @@ const product = [
   },
   {
     id: 4,
+    quantity:1,
+    status:true,
     label: "#دوره آموزشی",
     title: "آموزش کامل سرچ گوگل",
     cover: `assest/img/google-search-console-1-500x500.png`,
@@ -263,6 +271,8 @@ const product = [
   },
   {
     id: 5,
+    quantity:1,
+    status:true,
     label: "#دوره آموزشی",
     title: "HTML و CSS دوره آموزش ",
     cover: "assest/img/html,css.jpg",
@@ -328,6 +338,8 @@ const product = [
   },
   {
     id: 6,
+    quantity:1,
+    status:true,
     label: "#دوره آموزشی",
     title: "دوره رشد مهارت‌های نرم در زندگی",
     cover: "assest/img/soft-skill.jpg",
@@ -391,6 +403,8 @@ const product = [
   },
   {
     id: 7,
+    quantity:1,
+    status:true,
     label: "#دوره آموزشی",
     title: "دوره آموزشی مهارت تندخوانی و تقویت حافظه",
     cover: "assest/img/speed-reading.jpg",
@@ -455,6 +469,8 @@ const product = [
   },
   {
     id: 8,
+    quantity:1,
+    status:true,
     label: "#دوره آموزشی",
     title: "دوره آموزشی NPM در برنامه نویسی",
     cover: "assest/img/npm.jpg",
@@ -520,6 +536,8 @@ const product = [
   },
   {
     id: 9,
+    quantity:1,
+    status:true,
     label: "#دوره آموزشی",
     title: "دوره آموزشی برنامه‌نویسی با WordPress",
     cover: `assest/img/wordpress.png`,
@@ -588,6 +606,8 @@ const product = [
   },
   {
     id: 10,
+    quantity:1,
+    status:true,
     label: "#دوره آموزشی",
     title: "دوره آموزشی مکالمه آلمانی",
     cover: `assest/img/gernany.png`,
@@ -656,6 +676,8 @@ const product = [
   },
   {
     id: 11,
+    quantity:1,
+    status:true,
     label: "#دوره آموزشی",
     title: "دوره آموزشی مکالمه زبان انگلیسی",
     cover: `assest/img/en.png`,
@@ -724,6 +746,8 @@ const product = [
   },
   {
     id: 12,
+    quantity:1,
+    status:true,
     label: "#دوره آموزشی",
     title: "دوره فشرده آموزش فوتوشاپ",
     cover: `assest/img/photoshop.png`,
@@ -791,6 +815,8 @@ const product = [
   },
   {
     id: 13,
+    quantity:1,
+    status:true,
     label: "#دوره آموزشی",
     title: "دوره آموزشی عکاسی حرفه‌ای",
     cover: `assest/img/photography.png`,
@@ -856,6 +882,8 @@ const product = [
   },
   {
     id: 14,
+    quantity:1,
+    status:true,
     label: "#دوره آموزشی",
     title: "دوره آموزشی Clean Code",
     cover: `assest/img/clean-code.png`,
@@ -924,6 +952,8 @@ const product = [
   },
   {
     id: 15,
+    quantity:1,
+    status:true,
     label: "#دوره آموزشی",
     title: "دوره جامع وبمستران طلایی",
     cover: `assest/img/golden-webmasters.png`,
@@ -989,6 +1019,8 @@ const product = [
   },
   {
     id: 16,
+    quantity:1,
+    status:true,
     label: "#دوره آموزشی",
     title: "دوره آموزشی طراحی UI",
     cover: `assest/img/UI.png`,
