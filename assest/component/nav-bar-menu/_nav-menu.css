@@ -75,6 +75,16 @@ ul.show-menu {
   height: auto;
   transform: scale(1);
 }
+.best-of-the-month:hover {
+  transition: all 0.4s !important;
+}
+.best-of-the-month:hover a {
+  color: var(--white--) !important;
+}
+.best-of-the-month:hover {
+  background-color: var(--primary--) !important;
+  color: var(--white--) !important;
+}
 .category:hover .toggle-menu {
   color: var(--primary--);
 }
@@ -129,7 +139,7 @@ ul.show-menu {
   background-color: var(--light--);
   transition: all 0.4s ease;
   margin-top: -34px;
-  width: 60%;
+  width: 73%;
   align-items: flex-end !important;
   visibility: hidden;
   opacity: 0;
@@ -279,7 +289,7 @@ a.basket-link:hover i em {
 }
 
 .menu-mobile__submenu--item {
-  padding: 1.5rem;
+  padding: 0.5rem;
   border-bottom: 1px solid rgb(216, 216, 216);
   font-size: 14px;
   transition: all 0.5s;
@@ -338,5 +348,12 @@ a.basket-link:hover i em {
     width: 75% !important;
     height: 100%;
     margin-right: auto;
+  }
+  .icon__close {
+    position: absolute;
+    top: 2rem;
+    right: 1.2rem;
+    cursor: pointer;
+    font-size: 3rem;
   }
 }

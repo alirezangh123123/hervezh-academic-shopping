@@ -11,11 +11,11 @@ navBarTemplate.innerHTML = `
     <div class="row d-flex justify-content-between">
       <div class="col-sm-3 mt-4 shorcut-btn">
         <div class="link-btn-wrapper d-flex">
-          <a href="#" class="text-dark mx-1 blog-btn text-white"
+          <a href="../../../all-article.html" class="text-dark mx-1 blog-btn text-white"
             >بلاگ
             <div class="line"></div>
           </a>
-          <a href="#" class="text-dark mx-1 shop-btn text-white"
+          <a href="../../../shop.html" class="text-dark mx-1 shop-btn text-white"
             >فروشگاه
             <div class="line"></div>
           </a>
@@ -114,22 +114,17 @@ navBarTemplate.innerHTML = `
           </div>
           <div class="menu-mobile__wrapper">
             <div class="menu-mobile__content">
-              <div class="menu-mobile__search">
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="جستجو کنید ..."
-                />
-                <span>
-                  <i class="fa fa-search"></i>
-                </span>
-              </div>
               <ul class="menu-mobile__list list-unstyled">
                 <li class="menu-mobile__item">
                   <a href="index.html" class="menu-mobile__link">
                     <span class="text-dark">صفحه اصلی</span>
                   </a>
+                </li>
+                <li class="menu-mobile__item parent-item-submenu">
+                  <a href="#" class="menu-mobile__link text-dark">
+                    <span>تماس با ما</span>
+                  </a>
+                  
                 </li>
                 <li class="menu-mobile__item parent-item-submenu">
                   <a href="#" class="menu-mobile__link">
@@ -139,15 +134,31 @@ navBarTemplate.innerHTML = `
                     ></span>
                   </a>
                   <ul class="menu-mobile__submenu--list list-unstyled">
-                    <li class="menu-mobile__submenu--item">
-                      <a href="#" class="text-dark">برنامه نویسی وب</a>
-                    </li>
-                    <li class="menu-mobile__submenu--item">
-                      <a href="#" class="text-dark">سئو</a>
-                    </li>
-                    <li class="menu-mobile__submenu--item">
-                      <a href="#" class="text-dark">زبان خارجی</a>
-                    </li>
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="2">دوره افزایش سرعت سایت</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="1">دوره گوگل آنالیتیکس</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="11">زبان انگلیسی</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="10">زبان آلمانی</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="7">دوره تقویت حافظه</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="6">مهارت های نرم زندگی</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="15">دوره وبمستران طلایی</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="5">HTML,css آموزش</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="8">NPM آموزش</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="9">Wordpress آموزش</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="14">Clean code آموزش</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="12">آموزش فوتوشاپ</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="16">UI آموزش</li>
                   </ul>
                 </li>
                 <li class="menu-mobile__item parent-item-submenu">
@@ -157,16 +168,16 @@ navBarTemplate.innerHTML = `
                   </a>
                   <ul class="menu-mobile__submenu--list list-unstyled">
                     <li class="menu-mobile__submenu--item">
-                      <a href="#" class="text-dark">سبد خرید</a>
+                      <a href="../../../cart.html" class="text-dark">سبد خرید</a>
                     </li>
                     <li class="menu-mobile__submenu--item">
-                      <a href="#" class="text-dark">مقالات</a>
+                      <a href="../../../all-article.html" class="text-dark">مقالات</a>
                     </li>
                     <li class="menu-mobile__submenu--item">
-                      <a href="#" class="text-dark">فروشگاه</a>
+                      <a href="../../../shop.html" class="text-dark">فروشگاه</a>
                     </li>
-                  </ul>
                 </li>
+                
               </ul>
             </div>
           </div>
@@ -181,11 +192,11 @@ navBarTemplate.innerHTML = `
           >
         </div>
         <div class="col-md-1 d-sm-none d-lg-block extend-short">
-          <a href="#" class="ms-3 text-dark">مقالات</a>
+          <a href="../../../all-article.html" class="ms-3 text-dark">مقالات</a>
         </div>
 
         <div
-          class="col-md-3 d-sm-none d-lg-block align-items-center mt-2 ms-5"
+          class="col-md-3 d-sm-none d-md-flex align-items-center mt-2 ms-5"
         >
           <div
             class="d-flex align-items-center justify-content-end mt-2 category"
@@ -200,95 +211,83 @@ navBarTemplate.innerHTML = `
             <ul class="show-menu list-unstyled w-100">
               <li class="d-flex align-items-center show-sub-menu">
                 <i class="fas fa-arrow-left sub-menu"></i>
-                <a class="text-dark w-100" href="#"
-                  >سئو
+                <a class="text-dark w-100" href="#">سئو
                   <ul class="list-unstyled sub-menu-child">
-                    <li>دوره افزایش سرعت سایت</li>
-                    <li>آموزش گوگل آنالیتیکس</li>
+                    <li class="sub-item-btn" aria-label="2">دوره افزایش سرعت سایت</li>
+                    <li class="sub-item-btn" aria-label="1">دوره گوگل آنالیتیکس</li>
                   </ul>
                 </a>
               </li>
               <li class="d-flex align-items-center show-sub-menu">
                 <i class="fas fa-arrow-left sub-menu"></i>
-                <a class="text-dark w-100" href="#"
-                  >زبان خارجی
+                <a class="text-dark w-100" href="#">زبان خارجی
                   <ul class="list-unstyled sub-menu-child">
-                    <li>زبان انگلیسی</li>
-                    <li>زبان آلمانی</li>
+                    <li class="sub-item-btn" aria-label="11">زبان انگلیسی</li>
+                    <li class="sub-item-btn" aria-label="10">زبان آلمانی</li>
                   </ul>
                 </a>
               </li>
-              <li><a class="text-dark w-100" href="#">برنامه ریزی</a></li>
+              <li class="d-flex align-items-center show-sub-menu">
+              <i class="fas fa-arrow-left sub-menu"></i>
+              <a class="text-dark w-100" href="#">مهارت های نرم
+              <ul class="list-unstyled sub-menu-child">
+                    <li class="sub-item-btn" aria-label="7">دوره تقویت حافظه</li>
+                    <li class="sub-item-btn" aria-label="6">مهارت های نرم زندگی</li>
+                  </ul>
+              </a></li>
               <li class="d-flex align-items-center show-sub-menu">
                 <i class="fas fa-arrow-left sub-menu"></i>
                 <a class="text-dark w-100" href="#"
                   >برنامه نویسی وب
                   <ul class="list-unstyled sub-menu-child">
-                    <li>طراحی وب</li>
-                    <li>دوره جاوا اسکریپت</li>
-                    <li>phpدوره متخصص</li>
+                    <li class="sub-item-btn" aria-label="15">دوره وبمستران طلایی</li>
+                    <li class="sub-item-btn" aria-label="5">HTML,css آموزش</li>
+                    <li class="sub-item-btn" aria-label="8">NPM آموزش</li>
+                    <li class="sub-item-btn" aria-label="9">Wordpress آموزش</li>
+                    <li class="sub-item-btn" aria-label="14">Clean code آموزش</li>
                   </ul>
                 </a>
               </li>
               <li class="d-flex align-items-center show-sub-menu">
                 <i class="fas fa-arrow-left sub-menu"></i>
                 <a class="text-dark w-100" href="#"
-                  >فناوری اطلاعات
+                  >طراحی و دیزاین
                   <ul class="list-unstyled sub-menu-child">
-                    <li>برنامه نویسی</li>
-                    <li>شبکه و امنیت</li>
+                    <li class="sub-item-btn" aria-label="12">آموزش فوتوشاپ</li>
+                    <li class="sub-item-btn" aria-label="16">UI آموزش</li>
                   </ul>
                 </a>
               </li>
-              <li><a class="text-dark w-100" href="#">devUps</a></li>
+              <li class="d-flex align-items-center show-sub-menu">
+              <i class="fas fa-arrow-left sub-menu"></i>
+              <a class="text-dark w-100" href="#">هنر
+                 <ul class="list-unstyled sub-menu-child">
+                    <li class="sub-item-btn" aria-label="13">آموزش عکاسی</li>
+                  </ul>
+              </a></li>
             </ul>
           </div>
         </div>
         <div
-          class="col-md-3 d-sm-none d-md-flex d-flex flex-column align-items-end justify-content-center mt-2 category"
-          style="cursor: pointer"
+          class="col-md-3 d-sm-none d-lg-block d-flex flex-column  justify-content-center mt-2"
+          style="cursor: pointer; width:136px"
         >
           <p
-            class="toggle-menu d-flex justify-content-between align-items-center"
-            id="toggle-menu"
-          >
-            دسته بندی
-            <i class="fas fa-arrow-down mx-2"></i>
+            class="best-of-the-month text-center  text-dark  p-2 rounded-2 d-flex m-auto justify-content-center w-100 px-0  align-items-center pe-0"
+            id="toggle-menu">
+            <a class="text-center" href="../../../index.html#webmaster">
+            <i class="fa fa-star" style= "margin-right:4px"></i>  دوره برتر ماه </a>
+         
           </p>
-          <ul class="show-menu list-unstyled w-100">
-            <li class="d-flex align-items-center show-sub-menu">
-              <i class="fas fa-arrow-left sub-menu"></i>
-              <a class="text-dark w-100" href="#"
-                >چند رسانه ای
-                <ul class="list-unstyled sub-menu-child">
-                  <li>انیمیشن سه بعدی</li>
-                  <li>نمونه فیلم</li>
-                </ul>
-              </a>
-            </li>
-            <li><a class="text-dark w-100" href="#">زبان خارجی</a></li>
-            <li><a class="text-dark w-100" href="#">سئو</a></li>
-            <li><a class="text-dark w-100" href="#">طراحی وب</a></li>
-            <li class="d-flex align-items-center show-sub-menu">
-              <i class="fas fa-arrow-left sub-menu"></i>
-              <a class="text-dark w-100" href="#"
-                >فناوری اطلاعات
-                <ul class="list-unstyled sub-menu-child">
-                  <li>برنامه نویسی</li>
-                  <li>شبکه و امنیت</li>
-                </ul>
-              </a>
-            </li>
-            <li><a class="text-dark w-100" href="#">devUps</a></li>
-          </ul>
         </div>
       </div>
       <div
         class="col-sm-6 col-md-4 right-side-menu d-flex justify-content-end"
-      >
+        style="cursor: pointer"
+        >
         <div class="col d-flex justify-content-end">
           <div class="site-logo">
-            <img src="assest/img/logo-1.png" class="img-fluid" alt="" />
+          <a href="../../../index.html"> <img src="assest/img/logo-1.png" class="img-fluid" alt="" /></a>
           </div>
         </div>
       </div>
@@ -302,6 +301,13 @@ class NavBar extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.append(navBarTemplate.content.cloneNode(true));
+    //set click event link
+    this.shadowRoot.querySelectorAll(".sub-item-btn").forEach((btn) => {
+      btn.addEventListener("click", (btnEvent) => {
+        let getLabelId = parseInt(btnEvent.target.getAttribute("aria-label"));
+        location.href = `product.html?id=${getLabelId}`;
+      });
+    });
     //set item-counter
     this.shadowRoot.querySelector(".item-counter");
     fetch(
