@@ -258,13 +258,13 @@ navBarTemplate.innerHTML = `
           </div>
         </div>
         <div
-          class="col-md-3 d-sm-none d-lg-block d-flex flex-column align-items-end justify-content-center mt-2 category"
-          style="cursor: pointer"
+          class="col-md-3 d-sm-none d-lg-block d-flex flex-column  justify-content-center mt-2"
+          style="cursor: pointer; width:136px"
         >
           <p
-            class="best-of-the-month  text-dark  p-2 rounded-2 d-flex justify-content-between align-items-center"
+            class="best-of-the-month text-center  text-dark  p-2 rounded-2 d-flex m-auto justify-content-center w-100 px-0  align-items-center pe-0"
             id="toggle-menu">
-            <a href="../../../index.html#webmaster">
+            <a class="text-center" href="../../../index.html#webmaster">
             <i class="fa fa-star" style= "margin-right:4px"></i>  دوره برتر ماه </a>
          
           </p>
@@ -289,6 +289,14 @@ class NavBar extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.append(navBarTemplate.content.cloneNode(true));
+    //set click event link
+    this.shadowRoot.querySelectorAll(".sub-item-btn").forEach((btn)=>{
+      btn.addEventListener("click",(btnEvent)=>{
+        let getLabelId= parseInt(btnEvent.target.getAttribute("aria-label"))
+        location.href = `product.html?id=${getLabelId}`
+        
+      })
+    })
     //set item-counter
     this.shadowRoot.querySelector(".item-counter");
     fetch(
