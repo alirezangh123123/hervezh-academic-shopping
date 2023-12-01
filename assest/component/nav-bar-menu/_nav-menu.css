@@ -289,7 +289,7 @@ a.basket-link:hover i em {
 }
 
 .menu-mobile__submenu--item {
-  padding: 1.5rem;
+  padding: 0.5rem;
   border-bottom: 1px solid rgb(216, 216, 216);
   font-size: 14px;
   transition: all 0.5s;
@@ -348,5 +348,12 @@ a.basket-link:hover i em {
     width: 75% !important;
     height: 100%;
     margin-right: auto;
+  }
+  .icon__close {
+    position: absolute;
+    top: 2rem;
+    right: 1.2rem;
+    cursor: pointer;
+    font-size: 3rem;
   }
 }

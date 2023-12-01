@@ -114,22 +114,17 @@ navBarTemplate.innerHTML = `
           </div>
           <div class="menu-mobile__wrapper">
             <div class="menu-mobile__content">
-              <div class="menu-mobile__search">
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="جستجو کنید ..."
-                />
-                <span>
-                  <i class="fa fa-search"></i>
-                </span>
-              </div>
               <ul class="menu-mobile__list list-unstyled">
                 <li class="menu-mobile__item">
                   <a href="index.html" class="menu-mobile__link">
                     <span class="text-dark">صفحه اصلی</span>
                   </a>
+                </li>
+                <li class="menu-mobile__item parent-item-submenu">
+                  <a href="#" class="menu-mobile__link text-dark">
+                    <span>تماس با ما</span>
+                  </a>
+                  
                 </li>
                 <li class="menu-mobile__item parent-item-submenu">
                   <a href="#" class="menu-mobile__link">
@@ -139,15 +134,31 @@ navBarTemplate.innerHTML = `
                     ></span>
                   </a>
                   <ul class="menu-mobile__submenu--list list-unstyled">
-                    <li class="menu-mobile__submenu--item">
-                      <a href="#" class="text-dark">برنامه نویسی وب</a>
-                    </li>
-                    <li class="menu-mobile__submenu--item">
-                      <a href="#" class="text-dark">سئو</a>
-                    </li>
-                    <li class="menu-mobile__submenu--item">
-                      <a href="#" class="text-dark">زبان خارجی</a>
-                    </li>
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="2">دوره افزایش سرعت سایت</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="1">دوره گوگل آنالیتیکس</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="11">زبان انگلیسی</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="10">زبان آلمانی</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="7">دوره تقویت حافظه</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="6">مهارت های نرم زندگی</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="15">دوره وبمستران طلایی</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="5">HTML,css آموزش</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="8">NPM آموزش</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="9">Wordpress آموزش</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="14">Clean code آموزش</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="12">آموزش فوتوشاپ</li>
+
+                  <li class="sub-item-btn menu-mobile__submenu--item" aria-label="16">UI آموزش</li>
                   </ul>
                 </li>
                 <li class="menu-mobile__item parent-item-submenu">
@@ -157,16 +168,16 @@ navBarTemplate.innerHTML = `
                   </a>
                   <ul class="menu-mobile__submenu--list list-unstyled">
                     <li class="menu-mobile__submenu--item">
-                      <a href="#" class="text-dark">سبد خرید</a>
+                      <a href="../../../cart.html" class="text-dark">سبد خرید</a>
                     </li>
                     <li class="menu-mobile__submenu--item">
-                      <a href="#" class="text-dark">مقالات</a>
+                      <a href="../../../all-article.html" class="text-dark">مقالات</a>
                     </li>
                     <li class="menu-mobile__submenu--item">
-                      <a href="#" class="text-dark">فروشگاه</a>
+                      <a href="../../../shop.html" class="text-dark">فروشگاه</a>
                     </li>
-                  </ul>
                 </li>
+                
               </ul>
             </div>
           </div>
@@ -272,10 +283,11 @@ navBarTemplate.innerHTML = `
       </div>
       <div
         class="col-sm-6 col-md-4 right-side-menu d-flex justify-content-end"
-      >
+        style="cursor: pointer"
+        >
         <div class="col d-flex justify-content-end">
           <div class="site-logo">
-            <img src="assest/img/logo-1.png" class="img-fluid" alt="" />
+          <a href="../../../index.html"> <img src="assest/img/logo-1.png" class="img-fluid" alt="" /></a>
           </div>
         </div>
       </div>
@@ -290,13 +302,12 @@ class NavBar extends HTMLElement {
     this.attachShadow({ mode: "open" });
     this.shadowRoot.append(navBarTemplate.content.cloneNode(true));
     //set click event link
-    this.shadowRoot.querySelectorAll(".sub-item-btn").forEach((btn)=>{
-      btn.addEventListener("click",(btnEvent)=>{
-        let getLabelId= parseInt(btnEvent.target.getAttribute("aria-label"))
-        location.href = `product.html?id=${getLabelId}`
-        
-      })
-    })
+    this.shadowRoot.querySelectorAll(".sub-item-btn").forEach((btn) => {
+      btn.addEventListener("click", (btnEvent) => {
+        let getLabelId = parseInt(btnEvent.target.getAttribute("aria-label"));
+        location.href = `product.html?id=${getLabelId}`;
+      });
+    });
     //set item-counter
     this.shadowRoot.querySelector(".item-counter");
     fetch(
@@ -306,7 +317,10 @@ class NavBar extends HTMLElement {
       .then((data) => {
         this.changetToArray = Object.entries(data);
         console.log(
-          (this.shadowRoot.querySelector(".item-counter").textContent =this.changetToArray.length));});
+          (this.shadowRoot.querySelector(".item-counter").textContent =
+            this.changetToArray.length)
+        );
+      });
 
     // mobile-menu
     this.shadowRoot
