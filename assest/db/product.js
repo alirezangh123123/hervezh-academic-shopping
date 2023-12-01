@@ -1087,3 +1087,34 @@ const product = [
   },
 ];
 export { product };
+
+
+
+/*
+<ul class="show-menu list-unstyled w-100">
+            <li class="d-flex align-items-center show-sub-menu">
+              <i class="fas fa-arrow-left sub-menu"></i>
+              <a class="text-dark w-100" href="#"
+                >چند رسانه ای
+                <ul class="list-unstyled sub-menu-child">
+                  <li>انیمیشن سه بعدی</li>
+                  <li>نمونه فیلم</li>
+                </ul>
+              </a>
+            </li>
+            <li><a class="text-dark w-100" href="#">زبان خارجی</a></li>
+            <li><a class="text-dark w-100" href="#">سئو</a></li>
+            <li><a class="text-dark w-100" href="#">طراحی وب</a></li>
+            <li class="d-flex align-items-center show-sub-menu">
+              <i class="fas fa-arrow-left sub-menu"></i>
+              <a class="text-dark w-100" href="#"
+                >فناوری اطلاعات
+                <ul class="list-unstyled sub-menu-child">
+                  <li>برنامه نویسی</li>
+                  <li>شبکه و امنیت</li>
+                </ul>
+              </a>
+            </li>
+            <li><a class="text-dark w-100" href="#">devUps</a></li>
+          </ul>
+*/
