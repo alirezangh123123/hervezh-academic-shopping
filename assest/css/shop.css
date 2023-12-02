@@ -37,8 +37,8 @@ form.search-field-form input.active {
 form.search-field-form ul.suggest-list {
   z-index: 999;
   width: 100% !important;
-  display: none;
-  visibility: hidden;
+  display: none !important;
+  visibility: hidden !important;
   margin-top: -20px;
 }
 form.search-field-form ul.suggest-list li {
@@ -61,6 +61,15 @@ form.search-field-form ul.suggest-list li i {
   cursor: pointer;
 }
 form.search-field-form ul.active {
-  display: block;
-  visibility: visible;
+  display: block !important;
+  visibility: visible !important;
+}
+
+@media screen and (max-width: 555px) {
+  li.suggest-item label {
+    font-size: 12px !important;
+  }
+  a.target-link {
+    font-size: 13px !important;
+  }
 }
