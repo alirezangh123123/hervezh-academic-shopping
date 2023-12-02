@@ -42,30 +42,42 @@ asideTemplate.innerHTML = `
   class="col-12 side-bar-catagory-inner text-end bg-white mt-3"
 >
   <span class="fw-bold me-3"
-    >دسته بندی مطالب
+    >دسته بندی دوره ها
     <span class="sub-border-catagory"></span>
   </span>
   <ul class="list-unstyled list-group list-group-flush">
     <li class="list-group-item">
-      <a href="#" class="w-100">چند رسانه ای</a>
+      <a href="../../../product.html?id=1" class="w-100">آنالیز گوگل</a>
     </li>
     <li class="list-group-item">
-      <a href="#" class="w-100">زبان خارجی</a>
+      <a href="../../../product.html?id=2" class="w-100">افزایش سرعت سایت</a>
     </li>
     <li class="list-group-item">
-      <a href="#" class="w-100">برنامه نویسی</a>
+      <a href="../../../product.html?id=4" class="w-100">سرچ حرفه ای درگوگل</a>
     </li>
     <li class="list-group-item">
-      <a href="#" class="w-100">dev-ops</a>
+      <a href="../../../product.html?id=5" class="w-100">html,css آموزش </a>
     </li>
     <li class="list-group-item">
-      <a href="#" class="w-100">سئو</a>
+      <a href="../../../product.html?id=3" class="w-100">آموزش ایمیل مارکتینگ</a>
     </li>
     <li class="list-group-item">
-      <a href="#" class="w-100">طراحی وب</a>
+      <a href="../../../product.html?id=6" class="w-100">رشد مهارت ای نرم در زندگی</a>
     </li>
     <li class="list-group-item">
-      <a href="#" class="w-100">فناوری اطلاعات</a>
+      <a href="../../../product.html?id=7" class="w-100">تکنیک های تقویت حافظه</a>
+    </li>
+    <li class="list-group-item">
+      <a href="../../../product.html?id=8" class="w-100">در برنامه نویسی npm آموزش </a>
+    </li>
+    <li class="list-group-item">
+      <a href="../../../product.html?id=9" class="w-100">wordpress  آموزش ساخت وبسایت با </a>
+    </li>
+    <li class="list-group-item">
+      <a href="../../../product.html?id=10" class="w-100">آموزش زبان آلمانی</a>
+    </li>
+    <li class="list-group-item">
+      <a href="../../../product.html?id=12" class="w-100">دوره فشرده آموزش فوتوشاپ</a>
     </li>
   </ul>
 </div>
@@ -73,21 +85,27 @@ asideTemplate.innerHTML = `
   class="col-12 side-bar-catagory-inner text-end bg-white mt-3"
 >
   <span class="fw-bold me-3"
-    >دسته بندی دوره ها
+    > ...دسترسی سریع به 
     <span class="sub-border-catagory"></span>
   </span>
   <ul class="list-unstyled list-group list-group-flush">
     <li class="list-group-item">
-      <a href="#" class="w-100">گوگل آنالیتیکس</a>
+      <a href="../../../index.html" class="w-100">صفحه اصلی</a>
     </li>
     <li class="list-group-item">
-      <a href="#" class="w-100">افزایش سرعت سایت</a>
+      <a href="../../../cart.html" class="w-100">سبد خرید</a>
     </li>
     <li class="list-group-item">
-      <a href="#" class="w-100">ایمیل مارکتینگ</a>
+      <a href="../../../index.html#webmaster" class="w-100">دوره برتر ماه</a>
     </li>
     <li class="list-group-item">
-      <a href="#" class="w-100">سرچ حرفه ای در گوگل</a>
+      <a href="../../../all-article.html" class="w-100">مقالات</a>
+    </li>
+    <li class="list-group-item">
+      <a href="../../../all-article.html#footer" class="w-100">تماس با ما</a>
+    </li>
+    <li class="list-group-item">
+      <a href="#" class="w-100">درباره ما</a>
     </li>
   </ul>
 </div>
