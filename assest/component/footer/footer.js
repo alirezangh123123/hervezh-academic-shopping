@@ -20,37 +20,37 @@ footerTemplate.innerHTML = `
       >
         <ul class="list-unstyled first-row-list">
           <li>
-            <a href="#" class="text-light">گوگل آنالیتیکس</a>
+            <a href="../../../product.html?id=1" class="text-light">آنالیز گوگل</a>
             <i class="fa fa-circle"></i>
           </li>
           <li>
-            <a href="#" class="text-light">افزایش سرعت سایت</a>
+            <a href="../../../product.html?id=2" class="text-light">افزایش سرعت سایت</a>
             <i class="fa fa-circle"></i>
           </li>
           <li>
-            <a href="#" class="text-light">ایمیل مارکتینگ</a>
+            <a href="../../../product.html?id=3" class="text-light">ایمیل مارکتینگ</a>
             <i class="fa fa-circle"></i>
           </li>
           <li>
-            <a href="#" class="text-light">سرچ حرفه ای گوگل</a>
+            <a href="../../../product.html?id=5" class="text-light">html,css آموزش </a>
             <i class="fa fa-circle"></i>
           </li>
         </ul>
         <ul class="list-unstyled second-row-list">
           <li>
-            <a href="#" class="text-light">گوگل آنالیتیکس</a>
+            <a href="../../../product.html?id=12" class="text-light">آموزش فوتوشاپ</a>
             <i class="fa fa-circle"></i>
           </li>
           <li>
-            <a href="#" class="text-light">افزایش سرعت سایت</a>
+            <a href="../../../product.html?id=9" class="text-light">wordpress</a>
             <i class="fa fa-circle"></i>
           </li>
           <li>
-            <a href="#" class="text-light">ایمیل مارکتینگ</a>
+            <a href="../../../product.html?id=13" class="text-light">عکاسی حرفه ای</a>
             <i class="fa fa-circle"></i>
           </li>
           <li>
-            <a href="#" class="text-light">سرچ حرفه ای گوگل</a>
+            <a href="../../../product.html?id=14" class="text-light">clean code آموزش </a>
             <i class="fa fa-circle"></i>
           </li>
         </ul>
@@ -67,37 +67,38 @@ footerTemplate.innerHTML = `
       >
         <ul class="list-unstyled first-row-list">
           <li>
-            <a href="#" class="text-light">سبد خرید</a>
+            <a href="../../../cart.html" class="text-light">سبد خرید</a>
             <i class="fa fa-circle"></i>
           </li>
           <li>
-            <a href="#" class="text-light">برنامه ریزی</a>
+            <a href="../../../all-article.html" class="text-light">مقالات</a>
             <i class="fa fa-circle"></i>
           </li>
           <li>
-            <a href="#" class="text-light">فروشگاه</a>
+            <a href="../../../shop.html" class="text-light">فروشگاه</a>
             <i class="fa fa-circle"></i>
           </li>
           <li>
-            <a href="#" class="text-light">مقالات</a>
+            <a href="#" class="text-light">درباره ما</a>
             <i class="fa fa-circle"></i>
           </li>
         </ul>
+        
         <ul class="list-unstyled second-row-list">
           <li>
-            <a href="#" class="text-light">دواپس</a>
+            <a href="../../../index.html#webmaster" class="text-light">دوره برتر ماه</a>
             <i class="fa fa-circle"></i>
           </li>
           <li>
-            <a href="#" class="text-light">طراحی وب</a>
+            <a href="../../../index.html" class="text-light">صفحه اصلی</a>
             <i class="fa fa-circle"></i>
           </li>
           <li>
-            <a href="#" class="text-light">برنامه نویسی</a>
+            <a href="../../../index.html#why-hervezh" class="text-light">...چرا هروژ</a>
             <i class="fa fa-circle"></i>
           </li>
           <li>
-            <a href="#" class="text-light">ارتباط باما</a>
+            <a href="../../../index.html#footer" class="text-light">شبکه های اجتماعی</a>
             <i class="fa fa-circle"></i>
           </li>
         </ul>
