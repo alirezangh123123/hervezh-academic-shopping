@@ -1,0 +1,351 @@
+.custom-card {
+  padding: 60px 0 40px 0;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) 0px 1px 2px rgba(0, 0, 0, 0.249);
+  transition: all 0.4s ease;
+}
+.custom-card form .input-container {
+  position: relative;
+  margin: 40px 52px;
+}
+.custom-card form .input-container label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #757575;
+  line-height: 60px;
+  transition: all 0.4s ease;
+  font-size: 25px;
+}
+.custom-card form .input-container input {
+  direction: ltr;
+  outline: 0;
+  border: none !important;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: transparent;
+  height: 60px;
+  color: #222f3e;
+  font-size: 24px;
+}
+.custom-card form .input-container input:focus ~ label {
+  transform: translate(-12%, -50%) scale(0.75);
+}
+.custom-card form .input-container input:focus ~ .bar::before, .custom-card form .input-container input:focus ~ .bar::after {
+  width: 50% !important;
+}
+.custom-card form .input-container .bar {
+  width: 100%;
+  height: 1px;
+  background-color: #757575;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.custom-card form .input-container .bar::before, .custom-card form .input-container .bar::after {
+  content: "";
+  background-color: #ed2553 !important;
+  width: 0px !important;
+  height: 2px !important;
+  transition: all 0.3s ease;
+  position: absolute;
+}
+.custom-card form .input-container .bar::before {
+  left: 50%;
+}
+.custom-card form .input-container .bar::after {
+  right: 50%;
+}
+.custom-card form .input-container input:focus ~ .bar::before, .custom-card form .input-container input:focus ~ .bar::after {
+  width: 50% !important;
+}
+.custom-card form .button-container button {
+  padding: 15px;
+  background: transparent;
+  color: var(--secondary--);
+  border: 3px solid var(--secondary--);
+  font-size: 20px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+.custom-card form .button-container button:hover {
+  color: #ed2553 !important;
+  border-color: #ed2553 !important;
+}
+
+.fake-card-shadow {
+  background-color: #fafafa;
+  border-radius: 5px 5px 0 0;
+  height: 10px;
+  margin: 0 10px;
+  padding: 0;
+}
+
+.sign-up-card {
+  position: absolute;
+  top: 40px;
+  left: -70px;
+  width: 140px;
+  height: 140px;
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 100%;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+.sign-up-card .input-container input {
+  color: var(--white--) !important;
+}
+.sign-up-card .toggle {
+  position: relative;
+  background-color: var(--dark--);
+  width: 110px;
+  height: 110px;
+  border-radius: 100%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.141) 0px 1px 2px rgba(0, 0, 0, 0.21);
+  color: #fff;
+  font-size: 45px;
+  line-height: 116px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1;
+  left: 26px;
+  top: -70px;
+}
+.sign-up-card .toggle:hover + .sign-up-card {
+  top: 20px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  padding: 60px 0px 50px 0px;
+  overflow: hidden;
+  z-index: 999;
+}
+.sign-up-card h2 .close-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 60px;
+  color: #fff;
+}
+.sign-up-card .sign-up-title,
+.sign-up-card .input-container,
+.sign-up-card .button-container {
+  left: 100px;
+  opacity: 0;
+  visibility: hidden;
+}
+.sign-up-card .input-container label {
+  color: #757575;
+  line-height: 60px;
+  transition: all 0.4s ease;
+  font-size: 25px;
+}
+.sign-up-card .input-container input:focus ~ label {
+  transform: translate(-12%, -50%) scale(0.75);
+}
+.sign-up-card .input-container input:focus ~ .bar::before, .sign-up-card .input-container input:focus ~ .bar::after {
+  width: 50% !important;
+}
+
+.def-title,
+.sign-up-card,
+form {
+  z-index: 2;
+}
+
+.def-title {
+  text-align: right;
+  position: relative;
+  z-index: 1;
+  border-right: 5px solid #ed2553;
+  margin: 0 0 35px 0;
+  padding: 12px 35px 12px 0px;
+  font-size: 28px;
+  color: #ed2553;
+}
+
+.active .fake-card-shadow {
+  margin: 0 15px;
+  background: var(--light--);
+}
+
+.active .custom-login-card {
+  background-origin: var(--light--);
+  margin: 0 10px;
+}
+
+.active .sign-up-card {
+  top: 20px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  padding: 60px 0px 50px 0px;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.active .sign-up-card .toggle {
+  position: absolute;
+  top: 40px;
+  left: -70px;
+  box-shadow: none;
+  transform: scale(10);
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0;
+  z-index: -1 !important;
+}
+.active .sign-up-card .toggle i {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.active .sign-up-card .sign-up-title,
+.active .sign-up-card .input-container,
+.active .sign-up-card .button-container {
+  visibility: visible;
+  opacity: 1;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.active .sign-up-card .input-container label {
+  color: var(--light--);
+}
+
+.active .sign-up-card .input-container input:focus ~ label {
+  color: #fff;
+}
+
+.active .sign-up-card .input-container .bar {
+  background-color: var(--white--);
+}
+.active .sign-up-card .input-container .bar::after, .active .sign-up-card .input-container .bar::before {
+  background-color: var(--white--) !important;
+}
+
+.active .sign-up-card .button-container button {
+  color: #ed2553;
+  background-color: #fff;
+}
+
+.active .sign-up-card .sign-up-title,
+.active .sign-up-card .sign-up-form {
+  color: #fff !important;
+  z-index: 999 !important;
+  position: relative !important;
+}
+
+.active .sign-up-card .sign-up-title {
+  transition-delay: 0.3s;
+}
+.active .sign-up-card .input-container {
+  transition-delay: 0.7s;
+}
+.active .sign-up-card .button-container {
+  transition-delay: 1s;
+}
+
+@media only screen and (max-width: 767px) {
+  .custom-card form .input-container {
+    margin: 20px 20px;
+  }
+  .custom-card form .input-container label {
+    font-size: 20px;
+  }
+  .custom-card form .input-container input {
+    font-size: 18px;
+  }
+  .custom-card form .button-container button {
+    font-size: 15px;
+  }
+  .sign-up-card .toggle {
+    width: 80px;
+    height: 80px;
+    font-size: 30px;
+    line-height: 86px;
+    left: 84px;
+    top: 19px;
+  }
+  .sign-up-card h2 .close-btn {
+    left: 40px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .custom-card form .input-container {
+    margin: 30px 30px;
+  }
+  .custom-card form .input-container label {
+    font-size: 22px;
+  }
+  .custom-card form .input-container input {
+    font-size: 20px;
+  }
+  .custom-card form .button-container button {
+    font-size: 18px;
+  }
+  .sign-up-card .toggle {
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+    line-height: 106px;
+  }
+  .sign-up-card h2 .close-btn {
+    left: 50px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .custom-card form .input-container {
+    margin: 40px 40px;
+  }
+  .custom-card form .input-container label {
+    font-size: 25px;
+  }
+  .custom-card form .input-container input {
+    font-size: 24px;
+  }
+  .custom-card form .button-container button {
+    font-size: 20px;
+  }
+  .sign-up-card .toggle {
+    width: 120px;
+    height: 120px;
+    font-size: 50px;
+    line-height: 126px;
+  }
+  .sign-up-card h2 .close-btn {
+    left: 60px;
+  }
+}
+@media screen and (max-width: 445px) {
+  .custom-card form .input-container {
+    margin: 20px 20px;
+  }
+  .custom-card form .input-container label {
+    font-size: 17px;
+  }
+  .custom-card form .input-container input {
+    font-size: 17px;
+  }
+  .custom-card form .button-container button {
+    font-size: 13px;
+  }
+  .login-wrapper {
+    width: 250px;
+    margin: auto;
+  }
+  .custom-login-card {
+    width: 100%;
+  }
+  .sign-up-card .toggle {
+    width: 70px;
+    height: 70px;
+    font-size: 25px;
+    line-height: 79px;
+    left: 110px;
+    top: 15px;
+  }
+}
