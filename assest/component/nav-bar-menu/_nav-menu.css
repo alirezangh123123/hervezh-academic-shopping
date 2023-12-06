@@ -175,6 +175,30 @@ a.basket-link:hover i em {
 .sign-login-sec {
   font-size: 14px;
 }
+.sign-login-sec .login-wrapper{
+  transition: all .4s ;
+}
+.sign-login-sec .login-wrapper span.sign-out{
+transition: all .4s !important;
+transform: translateX(-10rem) !important;
+overflow: hidden !important;
+visibility: hidden !important;
+opacity: 0 !important;
+display: none !important;
+}
+.sign-login-sec .login-wrapper span.sign-out.active{
+transform: translateX(0rem) !important;
+overflow: hidden !important;
+visibility: visible !important;
+opacity: 1 !important;
+display: block !important;
+}
+.sign-login-sec .login-wrapper:hover{
+  background-color: var(--danger--) !important;
+}
+.sign-login-sec .login-wrapper:hover {
+  background-color: var(--danger--) !important;
+}
 /*  */
 /*  */
 /* hambeger menu */

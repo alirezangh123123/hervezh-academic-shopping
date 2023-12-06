@@ -24,11 +24,11 @@ navBarTemplate.innerHTML = `
       
       <div class="col-sm-4 mt-4 d-sm-block d-md-none sign-login-sec">
         <div
-          class="login-wrapper w-100 bg-primary text-white rounded-2 d-flex justify-content-center"
+          class="login-wrapper get-login-btn w-100 bg-primary text-white rounded-2 d-flex justify-content-center"
         >
-          <a href="#" class="text-white d-flex"
-            ><span>ورورد</span
-            ><span class="d-sm-none d-md-block">/ثبت نام</span></a
+          <a href="#" class="text-white d-flex">
+          <span class="login">ورورد</span>
+            <span class="d-sm-none d-md-block sign-up">/ثبت نام</span></a
           >
         </div>
       </div>
@@ -68,12 +68,10 @@ navBarTemplate.innerHTML = `
       >
         <div class="col-md-2 d-sm-none d-md-block sign-login-sec">
           <div
-            class="login-wrapper w-100 bg-primary text-white rounded-2 d-flex justify-content-center"
-          >
-            <a href="#" class="text-white d-flex"
-              ><span>ورورد</span
-              ><span class="d-sm-none d-xl-block">/ثبت نام</span></a
-            >
+            class="login-wrapper get-login-btn w-100 bg-primary text-white rounded-2 d-flex justify-content-center">
+            <a href="#" class="text-white d-flex"> 
+            <span class="login">ورورد</span>
+              <span class="d-sm-none d-xl-block sign-up">/ثبت نام</span></a>
           </div>
         </div>
 
@@ -182,8 +180,6 @@ navBarTemplate.innerHTML = `
             </div>
           </div>
         </aside>
-     
-
         <div
           class="col-md-1 d-sm-none d-xl-flex flex-nowrap extend-short"
         >
@@ -321,7 +317,6 @@ class NavBar extends HTMLElement {
             this.changetToArray.length)
         );
       });
-
     // mobile-menu
     this.shadowRoot
       .querySelector(".menu_icon")
@@ -335,8 +330,57 @@ class NavBar extends HTMLElement {
           .querySelector(".menu-mobile")
           .classList.remove("active");
       });
+    //getcookiedata
+    let getCookie = (cookieName) => {
+      let cookieArray = $.cookie.split(";");
+      let getCookie = null;
+
+      cookieArray.some((cookie) => {
+        if (cookie.includes(cookieName)) {
+          getCookie = cookie.substring(cookie.indexOf("=") + 1);
+          return true;
+        }
+      });
+      return getCookie;
+    };
+    // login-panel
+    window.addEventListener("load", () => {
+      getCookie("user-data");
+      this.loginBtnContent = this.shadowRoot.querySelectorAll(".login");
+      this.signUpBtnContent = this.shadowRoot.querySelectorAll(".sign-up");
+      this.signOutBtn = this.shadowRoot.querySelectorAll(".sign-out");
+      if (getCookie("user-data")) {
+        this.signUpBtnContent.forEach((item) => {
+          item.remove();
+        });
+        this.loginBtnContent.forEach((loginBtn) => {
+          loginBtn.classList.add("disabled");
+          loginBtn.textContent = getCookie("user-data");
+          let getParentElement = loginBtn.parentElement.parentElement;
+          getParentElement.addEventListener("mouseenter", (event) => {
+            loginBtn.innerHTML = "خروج از حساب";
+            getParentElement.addEventListener("click", (event) => {
+              let todayTime = new Date();
+              todayTime.setTime(todayTime.getTime() - 5 * 24 * 60 * 60 * 1000);
+              $.cookie = `user-data=${getCookie(
+                "user-data"
+              )};path=/;expires=${todayTime}`;
+              location.href = location.href;
+            });
+          });
+          getParentElement.addEventListener("mouseleave", (event) => {
+            loginBtn.innerHTML = getCookie("user-data") || "ورود";
+          });
+        });
+      } else {
+        this.loginBtn = this.shadowRoot.querySelectorAll(".get-login-btn");
+        this.loginBtn.forEach((btn) => {
+          btn.addEventListener("click", (event) => {
+            location.href = "../../../login-sign_in.html";
+          });
+        });
+      }
+    });
   }
-  // mobile-menu
-  //   moblie menu
 }
 export { NavBar };
