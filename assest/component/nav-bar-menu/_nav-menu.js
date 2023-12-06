@@ -26,9 +26,9 @@ navBarTemplate.innerHTML = `
         <div
           class="login-wrapper get-login-btn w-100 bg-primary text-white rounded-2 d-flex justify-content-center"
         >
-          <a href="#" class="text-white d-flex"
-            ><span class="login">ورورد</span
-            ><span class="d-sm-none d-md-block sign-up">/ثبت نام</span></a
+          <a href="#" class="text-white d-flex">
+          <span class="login">ورورد</span>
+            <span class="d-sm-none d-md-block sign-up">/ثبت نام</span></a
           >
         </div>
       </div>
@@ -68,12 +68,10 @@ navBarTemplate.innerHTML = `
       >
         <div class="col-md-2 d-sm-none d-md-block sign-login-sec">
           <div
-            class="login-wrapper get-login-btn w-100 bg-primary text-white rounded-2 d-flex justify-content-center"
-          >
-            <a href="#" class="text-white d-flex"
-              ><span class="login">ورورد</span
-              ><span class="d-sm-none d-xl-block sign-up">/ثبت نام</span></a
-            >
+            class="login-wrapper get-login-btn w-100 bg-primary text-white rounded-2 d-flex justify-content-center">
+            <a href="#" class="text-white d-flex"> 
+            <span class="login">ورورد</span>
+              <span class="d-sm-none d-xl-block sign-up">/ثبت نام</span></a>
           </div>
         </div>
 
@@ -182,8 +180,6 @@ navBarTemplate.innerHTML = `
             </div>
           </div>
         </aside>
-     
-
         <div
           class="col-md-1 d-sm-none d-xl-flex flex-nowrap extend-short"
         >
@@ -353,6 +349,7 @@ class NavBar extends HTMLElement {
       getCookie("user-data");
       this.loginBtnContent = this.shadowRoot.querySelectorAll(".login");
       this.signUpBtnContent = this.shadowRoot.querySelectorAll(".sign-up");
+      this.signOutBtn = this.shadowRoot.querySelectorAll(".sign-out");
       if (getCookie("user-data")) {
         this.signUpBtnContent.forEach((item) => {
           item.remove();
@@ -360,6 +357,19 @@ class NavBar extends HTMLElement {
         this.loginBtnContent.forEach((loginBtn) => {
           loginBtn.classList.add("disabled");
           loginBtn.textContent = getCookie("user-data");
+          let getParentElement = loginBtn.parentElement.parentElement;
+          getParentElement.addEventListener("mouseenter", (event) => {
+            loginBtn.innerHTML = "خروج از حساب";
+            getParentElement.addEventListener("click", (event) => {
+              let todayTime = new Date();
+              todayTime.setTime(todayTime.getTime() - 5 * 24 * 60 * 60 * 1000);
+              $.cookie = `user-data=${getCookie("user-data")};path=/;expires=${todayTime}`;
+              location.href = location.href
+            });
+          });
+          getParentElement.addEventListener("mouseleave", (event) => {
+            loginBtn.innerHTML = getCookie("user-data")||"ورود";
+          });
         });
       } else {
         this.loginBtn = this.shadowRoot.querySelectorAll(".get-login-btn");

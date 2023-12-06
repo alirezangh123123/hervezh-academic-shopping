@@ -353,6 +353,7 @@ button.swiper-pagination-bullet {
   --blueShade--: #1f2042;
   --blueLink--: #0b11b9;
   --lightGreen--: rgb(26, 167, 26);
+  --danger--:#de0000;
 }
 
 .latin-numbers {
