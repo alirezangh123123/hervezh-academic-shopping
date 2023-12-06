@@ -317,8 +317,6 @@ class NavBar extends HTMLElement {
             this.changetToArray.length)
         );
       });
-    // login-panel
-
     // mobile-menu
     this.shadowRoot
       .querySelector(".menu_icon")
@@ -345,6 +343,7 @@ class NavBar extends HTMLElement {
       });
       return getCookie;
     };
+    // login-panel
     window.addEventListener("load", () => {
       getCookie("user-data");
       this.loginBtnContent = this.shadowRoot.querySelectorAll(".login");
@@ -363,12 +362,14 @@ class NavBar extends HTMLElement {
             getParentElement.addEventListener("click", (event) => {
               let todayTime = new Date();
               todayTime.setTime(todayTime.getTime() - 5 * 24 * 60 * 60 * 1000);
-              $.cookie = `user-data=${getCookie("user-data")};path=/;expires=${todayTime}`;
-              location.href = location.href
+              $.cookie = `user-data=${getCookie(
+                "user-data"
+              )};path=/;expires=${todayTime}`;
+              location.href = location.href;
             });
           });
           getParentElement.addEventListener("mouseleave", (event) => {
-            loginBtn.innerHTML = getCookie("user-data")||"ورود";
+            loginBtn.innerHTML = getCookie("user-data") || "ورود";
           });
         });
       } else {
