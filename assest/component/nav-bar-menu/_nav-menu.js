@@ -24,7 +24,7 @@ navBarTemplate.innerHTML = `
       
       <div class="col-sm-4 mt-4 d-sm-block d-md-none sign-login-sec">
         <div
-          class="login-wrapper w-100 bg-primary text-white rounded-2 d-flex justify-content-center"
+          class="login-wrapper get-login-btn w-100 bg-primary text-white rounded-2 d-flex justify-content-center"
         >
           <a href="#" class="text-white d-flex"
             ><span>ورورد</span
@@ -68,7 +68,7 @@ navBarTemplate.innerHTML = `
       >
         <div class="col-md-2 d-sm-none d-md-block sign-login-sec">
           <div
-            class="login-wrapper w-100 bg-primary text-white rounded-2 d-flex justify-content-center"
+            class="login-wrapper get-login-btn w-100 bg-primary text-white rounded-2 d-flex justify-content-center"
           >
             <a href="#" class="text-white d-flex"
               ><span>ورورد</span
@@ -321,7 +321,13 @@ class NavBar extends HTMLElement {
             this.changetToArray.length)
         );
       });
-
+    // login-panel
+      this.loginBtn = this.shadowRoot.querySelectorAll(".get-login-btn");
+      this.loginBtn.forEach((btn)=>{
+        btn.addEventListener("click",(event)=>{
+          location.href = "../../../login-sign_in.html"
+        })
+      })
     // mobile-menu
     this.shadowRoot
       .querySelector(".menu_icon")
