@@ -27,8 +27,8 @@ navBarTemplate.innerHTML = `
           class="login-wrapper get-login-btn w-100 bg-primary text-white rounded-2 d-flex justify-content-center"
         >
           <a href="#" class="text-white d-flex"
-            ><span>ورورد</span
-            ><span class="d-sm-none d-md-block">/ثبت نام</span></a
+            ><span class="login">ورورد</span
+            ><span class="d-sm-none d-md-block sign-up">/ثبت نام</span></a
           >
         </div>
       </div>
@@ -71,8 +71,8 @@ navBarTemplate.innerHTML = `
             class="login-wrapper get-login-btn w-100 bg-primary text-white rounded-2 d-flex justify-content-center"
           >
             <a href="#" class="text-white d-flex"
-              ><span>ورورد</span
-              ><span class="d-sm-none d-xl-block">/ثبت نام</span></a
+              ><span class="login">ورورد</span
+              ><span class="d-sm-none d-xl-block sign-up">/ثبت نام</span></a
             >
           </div>
         </div>
@@ -322,12 +322,7 @@ class NavBar extends HTMLElement {
         );
       });
     // login-panel
-      this.loginBtn = this.shadowRoot.querySelectorAll(".get-login-btn");
-      this.loginBtn.forEach((btn)=>{
-        btn.addEventListener("click",(event)=>{
-          location.href = "../../../login-sign_in.html"
-        })
-      })
+
     // mobile-menu
     this.shadowRoot
       .querySelector(".menu_icon")
@@ -341,8 +336,40 @@ class NavBar extends HTMLElement {
           .querySelector(".menu-mobile")
           .classList.remove("active");
       });
+    //getcookiedata
+    let getCookie = (cookieName) => {
+      let cookieArray = $.cookie.split(";");
+      let getCookie = null;
+
+      cookieArray.some((cookie) => {
+        if (cookie.includes(cookieName)) {
+          getCookie = cookie.substring(cookie.indexOf("=") + 1);
+          return true;
+        }
+      });
+      return getCookie;
+    };
+    window.addEventListener("load", () => {
+      getCookie("user-data");
+      this.loginBtnContent = this.shadowRoot.querySelectorAll(".login");
+      this.signUpBtnContent = this.shadowRoot.querySelectorAll(".sign-up");
+      if (getCookie("user-data")) {
+        this.signUpBtnContent.forEach((item) => {
+          item.remove();
+        });
+        this.loginBtnContent.forEach((loginBtn) => {
+          loginBtn.classList.add("disabled");
+          loginBtn.textContent = getCookie("user-data");
+        });
+      } else {
+        this.loginBtn = this.shadowRoot.querySelectorAll(".get-login-btn");
+        this.loginBtn.forEach((btn) => {
+          btn.addEventListener("click", (event) => {
+            location.href = "../../../login-sign_in.html";
+          });
+        });
+      }
+    });
   }
-  // mobile-menu
-  //   moblie menu
 }
 export { NavBar };
