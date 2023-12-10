@@ -65,29 +65,24 @@
                 </h2>
                 <form class="sign-up-form">
                   <div class="input-container">
-                    <input type="text" id="sign-up-user-name" />
+                    <input type="text" autocomplete="off" id="sign-up-user-name" required/>
                     <label for="sign-up-user-name">نام کاربری</label>
                     <div class="bar"></div>
                   </div>
                   <div class="input-container">
-                    <input type="password" id="sign-up-password" />
+                    <input type="password" autocomplete="off" id="sign-up-password" required/>
                     <label for="sign-up-password">کلمه عبور</label>
                     <div class="bar"></div>
                   </div>
                   <div class="input-container">
-                    <input type="password" id="r-sing-up-password" />
+                    <input type="password"autocomplete="off" id="r-sing-up-password" required/>
                     <label for="r-sing-up-password">تکرار کلمه عبور</label>
-                    <div class="bar"></div>
-                  </div>
-                  <div class="input-container">
-                    <input type="email" id="sign-up-email" />
-                    <label for="sign-up-email">ایمیل</label>
                     <div class="bar"></div>
                   </div>
                   <div
                     class="button-container register-btn d-flex justify-content-center"
                   >
-                    <button type="submit" class="btn btn-lg w-50" id="reg-btn">
+                    <button type="submit" class="btn btn-lg w-50 " id="reg-btn">
                       ثبت نام
                     </button>
                   </div>
@@ -99,7 +94,10 @@
         </div>
       </div>
     </section>
-
+    <!-- validation-toasts -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+     
+    </div>
     <script src="assest/js/bootstrap.bundle.min.js"></script>
     <script src="assest/js/main.js"></script>
     <script type="module" src="assest/js/login-form.js"></script>
