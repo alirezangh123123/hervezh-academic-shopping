@@ -145,14 +145,17 @@ window.addEventListener("load", async (event) => {
         );
       });
       if (showDatas) {
-         setCookie("user-data", showDatas[1].name, 4);
+        setCookie("user-data", showDatas[1].name, 4);
         await Swal.fire({
           icon: "success",
           title: "موفقیت آمیز",
           text: "...شما با موفقیت وارد شدید ",
         });
         location.href = "/index.html";
-      } else {
+      } else if (
+        !getMainContainer[0].className.includes("active") &&
+        !showDatas
+      ) {
         await Swal.fire({
           icon: "error",
           title: "خطا",
