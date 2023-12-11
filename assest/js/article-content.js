@@ -8,6 +8,10 @@ window.customElements.define("navbar-tg", NavBar);
 window.customElements.define("footer-tg", Footer);
 window.customElements.define("aside-tg", Aside);
 window.customElements.define("top-tg", TopBtn);
+window.addEventListener("load",()=>{
+  const preLoaderWrapper = $.getElementsByClassName("preload-container");
+  preLoaderWrapper[0].classList.add("hidden");
+})
 const getArticleContextWrapper = $.getElementsByClassName("article-context-wrapper");
 let getAddress  = new URLSearchParams(location.search)
 let getIdFormAddress = getAddress.get("id");
