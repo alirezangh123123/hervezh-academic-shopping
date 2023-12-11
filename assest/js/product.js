@@ -1421,3 +1421,7 @@ let PostToBasket = async (targetBtn) => {
     console.log("something is wrong", e);
   }
 };
+window.addEventListener("load",()=>{
+  const preLoaderWrapper = $.getElementsByClassName("preload-container");
+  preLoaderWrapper[0].classList.add("hidden");
+})

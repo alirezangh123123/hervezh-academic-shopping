@@ -127,6 +127,8 @@ getSignUpForm.addEventListener("submit", async (event) => {
 });
 window.addEventListener("load", async (event) => {
   try {
+    const preLoaderWrapper = $.getElementsByClassName("preload-container");
+    preLoaderWrapper[0].classList.add("hidden");
     let getUserData = await fetch(
       `https://userbasketproject-default-rtdb.firebaseio.com/userData.json`
     );

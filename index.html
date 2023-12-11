@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assest/css/swiper-bundle.css" />
     <link rel="stylesheet" href="assest/css/swipper.css" />
     <link rel="stylesheet" href="assest/component/articles/article.css" />
+    <link rel="stylesheet" href="assest/css/preloader.css">
     <link rel="stylesheet" href="assest/css/style.css" />
   </head>
   <body>
@@ -32,7 +33,8 @@
               </p>
               <form
                 class="w-100 search-field-form search-form ms-auto d-flex flex-column align-items-end"
-               style="height: 72px;">
+                style="height: 72px"
+              >
                 <div class="input-group w-100 mb-3 rounded-3">
                   <button
                     class="btn btn-primary"
@@ -94,13 +96,15 @@
       <div class="container-fluid">
         <div class="row">
           <div
-          id="webmaster"
+            id="webmaster"
             class="col-md-7 order-sm-2 order-md-1 course-intro-info d-flex flex-column justify-content-around"
           >
             <h4
               class="fw-bold text-white text-center order-sm-2 order-md-1 mt-3"
             >
-              دوره‌ی جامع غیرحضوری صفر تا صد وب مستران طلایی
+              <a class="text-white" href="product.html?id=15">
+                دوره‌ی جامع غیرحضوری صفر تا صد وب مستران طلایی
+              </a>
             </h4>
             <div
               class="course-intro-selling-info d-flex my-auto d-sm-none d-md-flex"
@@ -426,13 +430,17 @@
     <!-- footer -->
     <footer>
       <footer-tg></footer-tg>
-      <div class="preload-container">
-        <img src="assest/img/loading.gif" class="preload-img img-fluid" style="width: 100vh;" alt="" />
-      </div>
     </footer>
     <!-- footer -->
     <!-- top btn component -->
     <top-tg></top-tg>
+    <div class="preload-container">
+      <img
+        src="assest/img/loading.gif"
+        class="preload-img img-fluid"
+        alt=""
+      />
+    </div>
     <!-- top btn component -->
     <script src="assest/js/bootstrap.bundle.min.js"></script>
     <script src="assest/js/swiper-bundle.js"></script>

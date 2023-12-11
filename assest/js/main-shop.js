@@ -257,7 +257,6 @@ window.addEventListener("load", () => {
   if (sortParam === "popular") {
     mostPopularMode();
   }
-
   const preLoaderWrapper = $.getElementsByClassName("preload-container");
   preLoaderWrapper[0].classList.add("hidden");
 });
