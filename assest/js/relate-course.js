@@ -2,11 +2,12 @@ let $ = document;
 import { product } from "../db/product.js";
 const relateCourseWrapper = $.getElementById("relate-course-slider-wrapper");
 let relate_slider = product.forEach((item) => {
+  console.log(item.id);
   relateCourseWrapper.insertAdjacentHTML(
     "beforeend",
     `
     <div class="swiper-slide ">
-    <div class="card courses-card mt-4 px-3 py-1">
+    <div class="card courses-card mt-4 px-3 py-1 ">
       <div class="card-img courses-card-img">
         <img
           src="${item.cover}"
@@ -16,13 +17,15 @@ let relate_slider = product.forEach((item) => {
       </div>
       <div class="card-body courses-card-body">
         <div class="custom-card-title text-center">
-          <a href="#" class="fw-bold text-dark"
-            >${item.title}</a
-          >
+          <a href="../../product.html?id=${item.id}"  class="fw-bold   text-dark">
+            <p class="text-truncate" dir="rtl">
+            ${item.title}
+            </p>
+            </a>
         </div>
       </div>
       <div
-        class="card-footer courses-card-footer d-flex justify-content-between"
+        class="card-footer bg-white courses-card-footer rounded-bottom-3 d-flex justify-content-between"
       >
         <span class="price">${item.price}</span>
         <span class="member">
@@ -35,4 +38,4 @@ let relate_slider = product.forEach((item) => {
   );
 });
 console.log(product);
-export {relate_slider}
+export { relate_slider };
