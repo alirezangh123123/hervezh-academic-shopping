@@ -127,6 +127,8 @@ getSignUpForm.addEventListener("submit", async (event) => {
 });
 window.addEventListener("load", async (event) => {
   try {
+    const preLoaderWrapper = $.getElementsByClassName("preload-container");
+    preLoaderWrapper[0].classList.add("hidden");
     let getUserData = await fetch(
       `https://userbasketproject-default-rtdb.firebaseio.com/userData.json`
     );
@@ -145,14 +147,17 @@ window.addEventListener("load", async (event) => {
         );
       });
       if (showDatas) {
-         setCookie("user-data", showDatas[1].name, 4);
+        setCookie("user-data", showDatas[1].name, 4);
         await Swal.fire({
           icon: "success",
           title: "موفقیت آمیز",
           text: "...شما با موفقیت وارد شدید ",
         });
         location.href = "/index.html";
-      } else {
+      } else if (
+        !getMainContainer[0].className.includes("active") &&
+        !showDatas
+      ) {
         await Swal.fire({
           icon: "error",
           title: "خطا",

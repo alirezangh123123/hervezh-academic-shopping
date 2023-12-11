@@ -9,7 +9,7 @@ import { articles } from "../db/article.js";
 window.customElements.define("navbar-tg", NavBar);
 window.customElements.define("footer-tg", Footer);
 window.customElements.define("top-tg", TopBtn);
-
+const preLoaderWrapper = $.getElementsByClassName("preload-container");
 // course-slider
 var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",
@@ -139,3 +139,6 @@ getSearchINp.addEventListener("keyup", showSuggestions);
 getForm[0].addEventListener("submit", (event) => {
   event.preventDefault();
 });
+window.addEventListener("load",()=>{
+  preLoaderWrapper[0].classList.add("hidden");
+})
