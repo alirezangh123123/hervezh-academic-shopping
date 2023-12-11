@@ -73,3 +73,11 @@ form.search-field-form ul.active {
     font-size: 13px !important;
   }
 }
+@media screen and (max-width: 350px) {
+  #sort-btn {
+    font-size: 12px;
+  }
+  #catagory-title {
+    font-size: 12px;
+  }
+}
