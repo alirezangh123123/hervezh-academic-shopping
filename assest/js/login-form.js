@@ -9,6 +9,7 @@ const getSignUpPasswordRep = $.getElementById("r-sing-up-password");
 const getSignUpForm = $.getElementsByClassName("sign-up-form")[0];
 const getLoginForm = $.getElementsByClassName("login-form")[0];
 const toastWrapper = $.getElementsByClassName("toast-container");
+const getLoginBtn = $.getElementsByClassName("login-submit")[0];
 let toastAlert = (massage) => {
   toastWrapper[0].innerHTML = "";
   toastWrapper[0].insertAdjacentHTML(
@@ -111,14 +112,19 @@ getSignUpForm.addEventListener("submit", async (event) => {
       };
       setCookie("user-data", `${userData.name}`, 4);
       await sendUserData(userData);
-
+      await Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "ثبت نام با موفقیت انجام شد",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       location.href = "../../index.html";
     }
   } catch (err) {
     console.log("something went wrong", err);
   }
 });
-let userLogin = async (event) => {};
 window.addEventListener("load", async (event) => {
   try {
     let getUserData = await fetch(
@@ -126,25 +132,32 @@ window.addEventListener("load", async (event) => {
     );
     let getResponse = await getUserData.json();
     let changeToArray = Object.entries(getResponse);
-    getLoginForm.addEventListener("submit", (subEvent) => {
+    getLoginForm.addEventListener("submit", async (subEvent) => {
       subEvent.preventDefault();
       let getUserNameValue =
         getLoginForm.querySelector("#login-user-name").value;
       let getUserPasswordValue =
         getLoginForm.querySelector("#login-password").value;
       let showDatas = changeToArray.find((userData) => {
-        if (
+        return (
           getUserNameValue === userData[1].name &&
-          getUserPasswordValue == userData[1].password
-        ) {
-          return userData[1].name && userData[1].password;
-        }
+          getUserPasswordValue === userData[1].password
+        );
       });
       if (showDatas) {
-        setCookie("user-data", showDatas[1].name, 4);
+         setCookie("user-data", showDatas[1].name, 4);
+        await Swal.fire({
+          icon: "success",
+          title: "موفقیت آمیز",
+          text: "...شما با موفقیت وارد شدید ",
+        });
         location.href = "/index.html";
-      } else if (!showDatas) {
-        console.log("چنین کاربری در وبسایت وجود ندارد");
+      } else {
+        await Swal.fire({
+          icon: "error",
+          title: "خطا",
+          text: "چنین کاربری در سایت وجود ندارد",
+        });
       }
     });
   } catch (e) {
