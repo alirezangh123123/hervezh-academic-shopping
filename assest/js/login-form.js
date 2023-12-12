@@ -38,13 +38,13 @@ const userNamePattern = /^[a-zA-Z0-9\u0600-\u06FF._-]{8,12}/;
 const signUpPasswordPattern =
   /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,12}$/;
 //check validation
-getSignUpUserName.addEventListener("input", () => {
+getSignUpUserName.addEventListener("blur", () => {
   validationInputs();
 });
-getSignUpPassword.addEventListener("input", () => {
+getSignUpPassword.addEventListener("blur", () => {
   validationInputs();
 });
-getSignUpPasswordRep.addEventListener("input", () => {
+getSignUpPasswordRep.addEventListener("blur", () => {
   validationInputs();
 });
 let validationInputs = () => {
@@ -57,7 +57,7 @@ let validationInputs = () => {
   }
   if (!signUpPasswordPattern.test(getSignUpPassword.value)) {
     toastAlert(
-      " وحداقل ۶وحداکثر۱۲کاراکتر باشد\n.واعدادباشد special-characterکلمه عبور باید شامل حداقل یک حرف بزرگ و یک  "
+      "کلمه عبور باید شامل حداقل یک حرف بزرگ اعداد کاراکتر های ویژه و حداقل ۶ کاراکتر باشد"
     );
 
     return false;

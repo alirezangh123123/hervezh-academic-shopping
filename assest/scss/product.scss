@@ -44,7 +44,7 @@ header.header-product {
   }
 }
 // product description
-.product-description{
+.product-description {
   background-color: var(--light--) !important;
 }
 .product-info-wrapper {
@@ -53,19 +53,20 @@ header.header-product {
     height: 90px;
   }
 }
-// responsive tab-navigation 
-@media screen and (max-width:375px) {
-  button.nav-link{
+// responsive tab-navigation
+@media screen and (max-width: 375px) {
+  button.nav-link {
     font-size: 14px !important;
     margin: auto !important;
   }
-  .user-comment-content{
-    p{
+  .user-comment-content {
+    p {
       font-size: 12px !important;
     }
   }
-  .main-answer{
-    p,button{
+  .main-answer {
+    p,
+    button {
       font-size: 12px !important;
     }
   }
@@ -154,61 +155,64 @@ header.header-product {
     }
   }
 }
-@media screen and (max-width:600px) {
-  button.accordion-button{
-    .prod-session-level-explain{
-      p{
+@media screen and (max-width: 600px) {
+  button.accordion-button {
+    .prod-session-level-explain {
+      p {
         font-size: 11px !important;
       }
-      img{
+      img {
         width: 60px !important;
-        height: 60px  !important;
+        height: 60px !important;
       }
     }
   }
 }
-// 
-// 
+//
+//
 // answer-box-style
-// 
+//
 
-.main-answer{
-  display: none;// it will show after add active class
+.main-answer {
+  display: none; // it will show after add active class
   background-color: var(--lightShade--);
-  textarea{
-    &:focus-visible{
+  textarea {
+    &:focus-visible {
       outline: none !important;
     }
   }
-  .sub-answer-btn{
+  .sub-answer-btn {
     background-color: var(--lightGreen--);
   }
 }
-.main-answer.active{
+.main-answer.active {
   display: block !important;
 }
- @media screen and (max-width: 400px) {
-  .cancel-answer-btn{
+@media screen and (max-width: 400px) {
+  .cancel-answer-btn {
     font-size: 12px !important;
     padding: 0px 2px !important;
     margin-left: 4px;
   }
- }
-//  
-//  
+}
+//
+//
 //  relate-course-slider
-//  
-.relateSwiper{
+//
+.relateSwiper {
   width: 100%;
-  .swiper-wrapper{
-    .swiper-slide{
-      .card{
+  .swiper-wrapper {
+    .swiper-slide {
+      .card {
         width: 300px !important;
         display: flex;
         justify-content: unset !important;
         height: 100%;
       }
     }
-  
   }
+}
+.my-custom-swal {
+  font-size: 13px !important;
+  margin-top: 16px !important;
 }

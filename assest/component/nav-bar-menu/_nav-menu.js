@@ -358,7 +358,7 @@ class NavBar extends HTMLElement {
           loginBtn.textContent = getCookie("user-data");
           let getParentElement = loginBtn.parentElement.parentElement;
           getParentElement.addEventListener("mouseenter", (event) => {
-            loginBtn.innerHTML = "خروج از حساب";
+            loginBtn.innerHTML = "خروج";
             getParentElement.addEventListener("click", (event) => {
               let todayTime = new Date();
               todayTime.setTime(todayTime.getTime() - 5 * 24 * 60 * 60 * 1000);

@@ -93,8 +93,8 @@ if (showCorrectProdInDom) {
             </button>
           </div>
           <div class="col-lg-6 w-50">
-            <button class="btn w-75 btn-primary btn-lg">
-              <a href="#" class="text-white">مشاهده جلسات دوره</a>
+            <button class="btn w-75 btn-primary btn-lg session-btn">
+              <a href="#session-part" class="text-white">مشاهده جلسات دوره</a>
             </button>
           </div>
         </div>
@@ -873,7 +873,7 @@ ${showCorrectProdInDom.second_motto_course_desc}
               aria-labelledby="profile-tab"
               tabindex="0"
             >
-              <div class="container">
+              <div class="container" id="session-part">
                 <div class="row">
                   <div class="col-12 intro-session-prod w-100">
                     <div
@@ -1386,6 +1386,11 @@ var swiper = new Swiper(".relateSwiper", {
     },
   },
 });
+let getSissonBtn = $.getElementsByClassName("session-btn");
+let homTab = $.getElementById("home-tab");
+let profTab = $.getElementById("profile-tab");
+let ProfTabPane = $.getElementById("profile-tab-pane");
+let homeTabPane = $.getElementById("home-tab-pane");
 function isProductInBasket(productId) {
   return basketSet.has(productId);
 }
@@ -1393,11 +1398,10 @@ let addToBasketBtn = $.querySelectorAll(".add-to-cart-btn");
 addToBasketBtn.forEach((btn) => {
   btn.addEventListener("click", (clickEvent) => {
     clickEvent.preventDefault();
-    let getId = parseInt(clickEvent.target.getAttribute("aria-label"));
-    PostToBasket(clickEvent.target);
+    PostToBasket(clickEvent.target, btn);
   });
 });
-let PostToBasket = async (targetBtn) => {
+let PostToBasket = async (targetBtn, btn) => {
   try {
     let productId = targetBtn.getAttribute("aria-label");
     if (!isProductInBasket(productId)) {
@@ -1414,6 +1418,21 @@ let PostToBasket = async (targetBtn) => {
       );
       let showResult = await fetchData.json();
       console.log(showResult);
+      await Swal.fire({
+        title: "محصول به سبد خرید افزوده شد",
+        position: "bottom-end",
+        icon: "success",
+        showConfirmButton: false,
+        timer: 1500,
+        toast: true,
+        customClass: {
+          title: "my-custom-swal",
+          container: "my-custom-swal_container",
+        },
+      });
+
+      btn.textContent = "محصول در سبد خرید وجود دارد";
+      await btn.classList.add("disabled");
     } else {
       console.log("محصول تکراری است.");
     }
@@ -1421,7 +1440,53 @@ let PostToBasket = async (targetBtn) => {
     console.log("something is wrong", e);
   }
 };
-window.addEventListener("load",()=>{
+//avoid add duplicate product]
+let getDatasFromDb = async () => {
+  let fetchDataFromDb = await fetch(
+    `https://userbasketproject-default-rtdb.firebaseio.com/userBasketCart.json`
+  );
+  let getResponeFromDb = await fetchDataFromDb.json();
+  let changeToArrayFromDb = Object.entries(getResponeFromDb);
+
+  let showDataFromDb = changeToArrayFromDb.some((item) => {
+    if (item[1].id === parseInt(setProductId)) {
+      addToBasketBtn.forEach((item) => {
+        item.classList.add("disabled");
+        item.textContent = "محصول در سبد خرید وجود دارد";
+      });
+    }
+  });
+};
+let getCookie = (cookieName) => {
+  let cookieArray = $.cookie.split(";");
+  let getCookie = null;
+
+  cookieArray.some((cookie) => {
+    if (cookie.includes(cookieName)) {
+      getCookie = cookie.substring(cookie.indexOf("=") + 1);
+      return true;
+    }
+  });
+  return getCookie;
+};
+window.addEventListener("load", () => {
   const preLoaderWrapper = $.getElementsByClassName("preload-container");
   preLoaderWrapper[0].classList.add("hidden");
-})
+  if (!getCookie("user-data")) {
+    addToBasketBtn.forEach((btn) => {
+      btn.classList.add("disabled");
+      btn.textContent = "ابتدا وارد شوید";
+    });
+  }
+
+  getDatasFromDb();
+  //active session btn
+  getSissonBtn[0].addEventListener("click", () => {
+    homTab.classList.remove("active");
+    profTab.classList.add("active");
+    homeTabPane.classList.remove("show");
+    homeTabPane.classList.remove("active");
+    ProfTabPane.classList.add("show");
+    ProfTabPane.classList.add("active");
+  });
+});
