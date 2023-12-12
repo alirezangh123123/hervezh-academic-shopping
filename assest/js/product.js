@@ -1398,10 +1398,10 @@ let addToBasketBtn = $.querySelectorAll(".add-to-cart-btn");
 addToBasketBtn.forEach((btn) => {
   btn.addEventListener("click", (clickEvent) => {
     clickEvent.preventDefault();
-    PostToBasket(clickEvent.target,btn);
+    PostToBasket(clickEvent.target, btn);
   });
 });
-let PostToBasket = async (targetBtn,btn) => {
+let PostToBasket = async (targetBtn, btn) => {
   try {
     let productId = targetBtn.getAttribute("aria-label");
     if (!isProductInBasket(productId)) {
@@ -1418,8 +1418,21 @@ let PostToBasket = async (targetBtn,btn) => {
       );
       let showResult = await fetchData.json();
       console.log(showResult);
-      btn.classList.add("disabled");
-      btn.textContent = "محصول در سبد خرید وجود دارد";  
+     await Swal.fire({
+        title: "محصول به سبد خرید افزوده شد",
+        position:"bottom-end",
+        icon: 'success',
+        showConfirmButton: false,
+        timer: 1500,
+        toast:true,
+        customClass:{
+          title:"my-custom-swal",
+          container:"my-custom-swal_container",
+        }
+      });
+      
+      btn.textContent = "محصول در سبد خرید وجود دارد";
+      await btn.classList.add("disabled");
     } else {
       console.log("محصول تکراری است.");
     }

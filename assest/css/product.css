@@ -59,7 +59,8 @@ header.header-product .course-intro-info .course-intro-selling-info div.course-i
   .user-comment-content p {
     font-size: 12px !important;
   }
-  .main-answer p, .main-answer button {
+  .main-answer p,
+  .main-answer button {
     font-size: 12px !important;
   }
 }
@@ -165,4 +166,9 @@ header.header-product .course-intro-info .course-intro-selling-info div.course-i
   display: flex;
   justify-content: unset !important;
   height: 100%;
+}
+
+.my-custom-swal {
+  font-size: 13px !important;
+  margin-top: 16px !important;
 }
