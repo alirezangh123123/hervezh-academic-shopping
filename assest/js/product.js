@@ -1391,8 +1391,6 @@ let homTab = $.getElementById("home-tab");
 let profTab = $.getElementById("profile-tab");
 let ProfTabPane = $.getElementById("profile-tab-pane");
 let homeTabPane = $.getElementById("home-tab-pane");
-console.log(ProfTabPane);
-console.log(homeTabPane);
 function isProductInBasket(productId) {
   return basketSet.has(productId);
 }
@@ -1400,11 +1398,10 @@ let addToBasketBtn = $.querySelectorAll(".add-to-cart-btn");
 addToBasketBtn.forEach((btn) => {
   btn.addEventListener("click", (clickEvent) => {
     clickEvent.preventDefault();
-    let getId = parseInt(clickEvent.target.getAttribute("aria-label"));
-    PostToBasket(clickEvent.target);
+    PostToBasket(clickEvent.target,btn);
   });
 });
-let PostToBasket = async (targetBtn) => {
+let PostToBasket = async (targetBtn,btn) => {
   try {
     let productId = targetBtn.getAttribute("aria-label");
     if (!isProductInBasket(productId)) {
@@ -1421,6 +1418,8 @@ let PostToBasket = async (targetBtn) => {
       );
       let showResult = await fetchData.json();
       console.log(showResult);
+      btn.classList.add("disabled");
+      btn.textContent = "محصول در سبد خرید وجود دارد";  
     } else {
       console.log("محصول تکراری است.");
     }
@@ -1428,9 +1427,27 @@ let PostToBasket = async (targetBtn) => {
     console.log("something is wrong", e);
   }
 };
+//avoid add duplicate product]
+let getDatasFromDb = async () => {
+  let fetchDataFromDb = await fetch(
+    `https://userbasketproject-default-rtdb.firebaseio.com/userBasketCart.json`
+  );
+  let getResponeFromDb = await fetchDataFromDb.json();
+  let changeToArrayFromDb = Object.entries(getResponeFromDb);
+
+  let showDataFromDb = changeToArrayFromDb.some((item) => {
+    if (item[1].id === parseInt(setProductId)) {
+      addToBasketBtn.forEach((item) => {
+        item.classList.add("disabled");
+        item.textContent = "محصول در سبد خرید وجود دارد";
+      });
+    }
+  });
+};
 window.addEventListener("load", () => {
   const preLoaderWrapper = $.getElementsByClassName("preload-container");
   preLoaderWrapper[0].classList.add("hidden");
+  getDatasFromDb();
   //active session btn
   getSissonBtn[0].addEventListener("click", () => {
     homTab.classList.remove("active");
