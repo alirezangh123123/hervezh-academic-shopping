@@ -5,8 +5,9 @@ window.customElements.define("navbar-tg", NavBar);
 window.customElements.define("footer-tg", Footer);
 const cartDataWrapper = $.querySelector(".basket-list-wrapper");
 let getAllBasketPriceWrapper = $.querySelector(".sum-prises .price-number");
-let getAllQauntityBaket  = $.querySelector(".sum-quantity .q-number")
+let getAllQauntityBaket = $.querySelector(".sum-quantity .q-number");
 let getPreLoadWrapper = $.getElementsByClassName("preload-container");
+let purchaseBtn = $.getElementsByClassName("purchase-btn");
 let changeToArray;
 let fetchData;
 let getDataFromBasket = async () => {
@@ -21,7 +22,11 @@ let getDataFromBasket = async () => {
         <tbody class="">
               <tr class="item-wrapper">
                 <td scope="row">
-                  <span data-itemId="${item[0]}" class="align-middle total-item-price d-inline-block mt-3">${item[1].price}</span>
+                  <span data-itemId="${
+                    item[0]
+                  }" class="align-middle total-item-price d-inline-block mt-3">${
+        item[1].price
+      }</span>
                 </td>
                 <td>
                   <input
@@ -108,11 +113,10 @@ let calcTotalBasketPrice = () => {
     return acc + itemQuantity * itemPrice;
   }, 0);
   getAllBasketPriceWrapper.textContent = calcFinalPrice.toLocaleString(`us-en`);
-  let calcFinalQuatity = changeToArray.reduce((acc,item)=>{
-
+  let calcFinalQuatity = changeToArray.reduce((acc, item) => {
     let finalQuantity = item[1].quantity;
-    return acc + finalQuantity; 
-  },0)
+    return acc + finalQuantity;
+  }, 0);
   getAllQauntityBaket.textContent = calcFinalQuatity.toLocaleString(`us-en`);
 };
 let DelItem = async (itemId) => {
@@ -131,7 +135,25 @@ let DelItem = async (itemId) => {
     console.log("something went wrong", e);
   }
 };
+let clearCart = async () => {
+  try{
+    let fetchDataFromDb = await fetch(
+      `https://userbasketproject-default-rtdb.firebaseio.com/userBasketCart.json`,
+      {
+        method: "DELETE",
+      }
+    );
+    let getRes = await fetchDataFromDb.json();
+    location.reload();
+  }catch(e){
+    console.log("something went wrong", e);
+  }
+
+};
 window.addEventListener("load", async () => {
   getPreLoadWrapper[0].classList.add("hidden");
+  purchaseBtn[0].addEventListener("click", () => {
+    clearCart();
+  });
   getDataFromBasket();
 });
