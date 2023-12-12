@@ -1,0 +1,174 @@
+header.header-product {
+  background: url(../img/page-bg.jpg) center center no-repeat !important;
+  background-size: cover !important;
+  background-blend-mode: multiply !important;
+  background-color: rgba(0, 0, 0, 0.507) !important;
+  position: relative !important;
+}
+header.header-product .course-intro-info {
+  position: relative;
+}
+header.header-product .course-intro-info h4 {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header.header-product .course-intro-info svg.svg--full {
+  width: 90%;
+  height: 100%;
+  opacity: 0.7;
+  fill: var(--white--);
+  margin-top: 20px;
+  position: absolute;
+}
+header.header-product .course-intro-info .course-intro-selling-info div.course-intro-price {
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 20px;
+  font-size: 22px;
+  color: var(--white--);
+}
+header.header-product .course-intro-info .course-intro-selling-info div.course-intro-selling {
+  position: absolute;
+  color: var(--white--);
+  right: 25%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.product-description {
+  background-color: var(--light--) !important;
+}
+
+.product-info-wrapper .motto-svg {
+  width: 90px;
+  height: 90px;
+}
+
+@media screen and (max-width: 375px) {
+  button.nav-link {
+    font-size: 14px !important;
+    margin: auto !important;
+  }
+  .user-comment-content p {
+    font-size: 12px !important;
+  }
+  .main-answer p,
+  .main-answer button {
+    font-size: 12px !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about-product-title {
+    font-size: 17px !important;
+  }
+  .about-product p {
+    font-size: 14px !important;
+  }
+  .suggest-to-use h5 {
+    font-size: 16px !important;
+  }
+  .suggest-to-use .advice-list-wrapper {
+    font-size: 13px;
+  }
+  .avoid-to-use h5 {
+    font-size: 16px !important;
+  }
+  .avoid-to-use .advice-list-wrapper {
+    font-size: 13px;
+  }
+  .product-info-wrapper .motto-svg {
+    width: 60px;
+    height: 60px;
+  }
+  .product-motto span.fw-bold {
+    font-size: 14px !important;
+  }
+  .product-motto span:not(span.fw-bold) {
+    font-size: 12px !important;
+  }
+  .faq-wrapper button {
+    font-size: 13px !important;
+  }
+  .faq-wrapper .accordion-body {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+  }
+}
+.session-list li {
+  transition: all 0.4s;
+  font-weight: bold;
+}
+.session-list li a {
+  transition: all 0.4s;
+}
+.session-list li:hover a {
+  color: var(--blueLink--) !important;
+}
+
+@media screen and (max-width: 550px) {
+  .session-list {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .session-list li {
+    font-size: 10px !important;
+  }
+  .session-list li :nth-child(2) {
+    visibility: hidden;
+  }
+  .session-list li :nth-child(2) i {
+    visibility: visible !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  button.accordion-button .prod-session-level-explain p {
+    font-size: 11px !important;
+  }
+  button.accordion-button .prod-session-level-explain img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+.main-answer {
+  display: none;
+  background-color: var(--lightShade--);
+}
+.main-answer textarea:focus-visible {
+  outline: none !important;
+}
+.main-answer .sub-answer-btn {
+  background-color: var(--lightGreen--);
+}
+
+.main-answer.active {
+  display: block !important;
+}
+
+@media screen and (max-width: 400px) {
+  .cancel-answer-btn {
+    font-size: 12px !important;
+    padding: 0px 2px !important;
+    margin-left: 4px;
+  }
+}
+.relateSwiper {
+  width: 100%;
+}
+.relateSwiper .swiper-wrapper .swiper-slide .card {
+  width: 300px !important;
+  display: flex;
+  justify-content: unset !important;
+  height: 100%;
+}
+
+.my-custom-swal {
+  font-size: 13px !important;
+  margin-top: 16px !important;
+}

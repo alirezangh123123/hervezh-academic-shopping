@@ -1,0 +1,109 @@
+// dropdown styles
+.top-bar-wrapper {
+  .right-side-top-bar {
+    button {
+      transition: all 0.3s;
+      &:hover {
+        color: var(--white--);
+        background-color: var(--gray--);
+      }
+    }
+  }
+  .left-side-top-bar {
+    form {
+      input {
+        &:focus {
+          box-shadow: none !important;
+        }
+      }
+    }
+  }
+}
+// responsive top-bar
+@media screen and (max-width: 540px) {
+  .top-bar-wrapper {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+}
+// courses and product
+@media screen and (min-width: 560px) and (max-width: 769px) {
+  .courses-and-product-wrapper {
+    .courses-and-prod {
+      .row {
+        div {
+          // margin-bottom: 73px;
+          .courses-card {
+            width: 400px !important;
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
+}
+// search field style
+a.target-link-location {
+  left: 7%;
+  top: 50%;
+  transform: translate(-50%, -50%) !important;
+}
+form.search-field-form {
+  input {
+    transition: all 0.4s;
+    width: inherit;
+  }
+  input.active {
+    width: 100% !important;
+  }
+  ul.suggest-list {
+    z-index: 999;
+    width: 100% !important;
+    display: none !important;
+    visibility: hidden !important;
+    margin-top: -20px;
+    li {
+      position: relative;
+      transition: all 0.3s;
+      // z-index: 999 !important;
+      background-color: var(--white--);
+      &:hover {
+        background-color: var(--primary--);
+        color: var(--white--);
+      }
+      &:hover a {
+        color: var(--white--);
+      }
+      a {
+        width: 100%;
+        transition: inherit;
+      }
+      i {
+        cursor: pointer;
+      }
+    }
+  }
+  ul.active {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+// responsive font size of search field
+@media  screen and (max-width: 555px) {
+  li.suggest-item{
+    label{
+      font-size: 12px !important;
+    }
+  }
+  a.target-link{
+    font-size: 13px !important;
+  }
+}
+@media screen and (max-width:350px) {
+  #sort-btn{
+    font-size: 12px;
+  }
+  #catagory-title{
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سبد خرید</title>
+    <link rel="stylesheet" href="assest/css/font-awesome.css" />
+    <link rel="stylesheet" href="assest/css/bootstrap.css" />
+    <link rel="stylesheet" href="assest/css/swiper-bundle.css" />
+    <link rel="stylesheet" href="assest/css/swipper.css" />
+    <link rel="stylesheet" href="assest/css/style.css" />
+    <link rel="stylesheet" href="assest/css/preloader.css" />
+    <link rel="stylesheet" href="assest/css/cart.css" />
+  </head>
+  <body class="bg-light">
+    <section class="cart-container">
+      <header class="pb-4">
+        <section class="menu-wrapper">
+          <navbar-tg></navbar-tg>
+          <div class="container">
+            <div class="row">
+              <div class="breadcrub-wrapper mt-4">
+                <nav
+                  style="--bs-breadcrumb-divider: '<'"
+                  aria-label="breadcrumb"
+                >
+                  <ol class="breadcrumb d-flex justify-content-end me-3">
+                    <li class="breadcrumb-item active" aria-current="page">
+                      سبد خرید
+                    </li>
+                    <li class="breadcrumb-item text-white">
+                      <a href="shop.html" class="text-white">فروشگاه</a>
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
+      <section class="basket-list mt-5 text-end">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-12">
+              <table class="table basket-list-wrapper">
+                <thead class="border-bottom border-secondary">
+                  <tr>
+                    <th scope="col" style="width: 20%">مجموع</th>
+                    <th scope="col" style="width: 12%">تعداد</th>
+                    <th scope="col" style="width: 13%">قیمت</th>
+                    <th scope="col" style="width: 25%">عنوان محصول</th>
+                    <th class="cover-prod" scope="col" style="width: 20%">
+                      کاور محصول
+                    </th>
+                    <th scope="col" style="width: 10%"></th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            <div
+              class="col-md-7 left-side order-sm-2 order-lg-1 w-50 ms-lg-3 bg-white rounded-0 p-3 d-flex flex-column justify-content-between"
+            >
+              <div
+                class="sum-quantity d-flex justify-content-between px-6 my-3"
+              >
+                <span class="q-number">0</span>
+                <span>:تعداد کل</span>
+              </div>
+
+              <div class="sum-prises d-flex justify-content-between px-6 my-3">
+                <span class="price-number">۰</span>
+                <span>:قیمت کل</span>
+              </div>
+              <div
+                class="final-purchase-btn-wrapper mt-3 d-flex justify-content-around"
+              >
+                <button
+                  class="btn update-prise-btn btn-primary rounded-0 px-sm-0 py-sm-0 px-lg-4 py-lg-3"
+                >
+                  پرداخت نهایی
+                </button>
+                <button
+                  class="btn purchase-btn btn-dark rounded-0 px-sm-0 py-sm-0 px-lg-4 py-lg-3"
+                >
+                  حذف کل سبد خرید
+                </button>
+              </div>
+            </div>
+            <div
+              class="col-md-5 right-side order-sm-1 order-lg-2 mt-3 mb-sm-3 mb-lg-0"
+            >
+              <div class="discount-wrapper px-lg-6">
+                <form class="discount-form d-flex">
+                  <button
+                    type="submit"
+                    class="btn btn-dark text-white me-1"
+                    style="border-radius: 4px"
+                  >
+                    اعمال کد
+                  </button>
+                  <input
+                    type="text"
+                    class="form-control w-75 rounded-0 text-end py-3"
+                    placeholder="... کد تخفیف"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <footer-tg></footer-tg>
+      </footer>
+    </section>
+    <!-- preloader -->
+    <div class="preload-container">
+      <img src="assest/img/loading.gif" class="preload-img" alt="" />
+    </div>
+    <script src="assest/js/bootstrap.bundle.min.js"></script>
+    <script src="assest/js/swiper-bundle.js"></script>
+    <script src="assest/js/main.js"></script>
+    <script type="module" src="assest/js/cart.js"></script>
+  </body>
+</html>

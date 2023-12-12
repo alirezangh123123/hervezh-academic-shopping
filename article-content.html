@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مقالات</title>
+    <link rel="stylesheet" href="assest/css/font-awesome.css" />
+    <link rel="stylesheet" href="assest/css/bootstrap.css" />
+    <link rel="stylesheet" href="assest/css/swiper-bundle.css" />
+    <link rel="stylesheet" href="assest/css/swipper.css" />
+    <link rel="stylesheet" href="assest/css/style.css" />
+    <link rel="stylesheet" href="assest/css/preloader.css">
+    <link rel="stylesheet" href="assest/css/article-content.css" />
+  </head>
+  <body style="background-color: var(--light--)">
+    <section class="article-page-container">
+      <header id="topBody">
+        <section class="menu-wrapper pb-3">
+          <navbar-tg></navbar-tg>
+          <div class="container breadcrumb-wrapper">
+            <div class="row">
+              <div class="breadcrub-wrapper mt-4">
+                <nav
+                  style="--bs-breadcrumb-divider: '<'"
+                  aria-label="breadcrumb"
+                >
+                  <ol class="breadcrumb d-flex justify-content-end me-3">
+                    <li class="breadcrumb-item active" aria-current="page">
+                      مقالات
+                    </li>
+                    <li class="breadcrumb-item text-white">
+                      <a href="index.html" class="text-white">صفحه اصلی</a>
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
+
+      <main class="main-content mt-4">
+        <div class="container rounded-2">
+          <div class="row">
+            <div class="col-md-3 order-sm-3 order-md-2">
+              <aside-tg></aside-tg>
+            </div>
+            <div
+              class="col-md-9 order-sm-1 order-md-2 article-context-wrapper bg-white rounded-2 shadow"
+            >
+            
+            </div>
+            <div
+              class="col-md-9 ms-auto order-2 article-author bg-white shadow rounded-1 mt-4 py-2 px-1"
+            >
+              <h5 class="fw-bold text-end my-auto p-3 text-secondary">
+                علیرضا نقویان
+              </h5>
+              <p
+                class="text-end text-secondary me-3 d-flex justify-content-end"
+              >
+                .😉😉😉سلام دوستان علیرضا نقویان هستم. دانشجو فرانت اند ممنون از
+                اینکه مقاله من را خواندید
+                <br />
+                . لطفا نظرات و انتقادات خود را نسبت به محتوای این مقاله با ما در
+                میان بگذارید
+              </p>
+            </div>
+            <div
+              class="col-md-9 ms-auto order-2 comment-for-author bg-white rounded-0 mt-4 py-2 px-1"
+            >
+              <p class="text-end me-2 mt-2">
+                دیدگاه خودرا با ما در میان بگذارید
+              </p>
+              <p class="caption-top text-muted text-end me-2 mt-1">
+                .آدرس ایمیل شما منتشر نخواهد شد
+              </p>
+              <div class="form-comment-container">
+                <form>
+                  <textarea
+                    placeholder="دیدگاه شما"
+                    id=""
+                    cols="20"
+                    rows="10"
+                    class="w-100 bg-white text-end pt-2 pe-2 rounded"
+                  ></textarea>
+                  <div class="input-group d-flex justify-content-between">
+                    <input
+                      type="text"
+                      name="userName "
+                      class="form-control mx-2 rounded-0 text-end"
+                      placeholder="...نام کاربری"
+                    />
+                    <input
+                      type="email"
+                      name="userName "
+                      class="form-control mx-2 rounded-0 text-end"
+                      placeholder="...نام کاربری"
+                    />
+                    <div
+                      class="checkbox-wrapper d-flex me-2 mt-2 justify-content-end w-100"
+                    >
+                      <label for="checkbox" class="mx-2" style="font-size: 18px"
+                        >مرا به خاطر بسپار</label
+                      >
+                      <input
+                        type="checkbox"
+                        id="checkbox"
+                        class="me-2 form-check-input"
+                      />
+                    </div>
+                    <div class="submit-comment-btn d-grid w-100 my-2">
+                      <button
+                        type="submit"
+                        class="btn btn-primary d-grid rounded-0 text-white text-center w-100"
+                        style="border-radius: 9px !important"
+                      >
+                        ارسال دیدگاه
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <footer-tg></footer-tg>
+      </footer>
+      <top-tg></top-tg>
+    </section>
+    <div class="preload-container">
+      <img src="assest/img/loading.gif" class="preload-img img-fluid" style="width: 100vh;" alt="" />
+    </div>
+    <script src="assest/js/bootstrap.bundle.min.js"></script>
+    <script src="assest/js/swiper-bundle.js"></script>
+    <script src="assest/js/main.js"></script>
+    <script type="module" src="assest/js/article-content.js"></script>
+  </body>
+</html>

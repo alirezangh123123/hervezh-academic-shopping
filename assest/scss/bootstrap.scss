@@ -1,1 +1,62 @@
+$primary: #ffc107;
+$light: #f5f5f5;
+
+// custom breakpoint resulotion
+$grid-breakpoints: (
+  xs: 0,
+  sm: 320px,
+  md: 769px,
+  lg: 992px,
+  xl: 1200px,
+);
+// add some new custom margin classes
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+  7: $spacer * 5,
+  8: $spacer * 7,
+  9: $spacer * 9,
+) !default;
+// scss-docs-start border-radius-variables
+$border-radius: 0.8rem !default;
+$border-radius-sm: 1rem !default;
+$border-radius-lg: 1.2rem !default;
+$border-radius-xl: 1.5rem !default;
+$border-radius-xxl: 2.3rem !default;
+$border-radius-pill: 50rem !default;
+// enable-negative-margin
+$enable-negative-margins: true !default;
+// equal card height
+$card-height: 100%;
+// breadcrumb
+$breadcrumb-active-color: $primary;
+$breadcrumb-divider-color: var(--light--);
+// accordion
+$accordion-button-icon: unset;
+$accordion-button-active-icon: unset;
+$accordion-icon-active-color: $light;
+$accordion-button-active-bg: unset;
+$accordion-button-focus-box-shadow: unset;
+$accordion-button-active-color: $primary;
+// nav-tabs
+$nav-tabs-link-active-color: #ffc107;
+$nav-tabs-border-width: unset;
+$nav-tabs-link-active-bg: inherit;
+$nav-link-color: #7d7d7d;
+$nav-link-font-weight: bold;
+// dropdown
+$dropdown-item-padding-y: $spacer * 0.5;
+$dropdown-link-hover-color: #ffffff;
+$dropdown-link-hover-bg: #ffc107;
+// form-control option
+$input-focus-box-shadow: none;
+$form-check-input-checked-bg-color: #ffc107;
+$form-check-input-focus-box-shadow:none;
+$form-check-input-focus-border:none;
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

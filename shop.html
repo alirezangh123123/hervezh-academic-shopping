@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فروشگاه</title>
+    <link rel="stylesheet" href="assest/css/font-awesome.css" />
+    <link rel="stylesheet" href="assest/css/bootstrap.css" />
+    <link rel="stylesheet" href="assest/css/swiper-bundle.css" />
+    <link rel="stylesheet" href="assest/css/swipper.css" />
+    <link rel="stylesheet" href="assest/css/style.css" />
+    <link rel="stylesheet" href="assest/css/preloader.css" />
+    <link rel="stylesheet" href="assest/css/shop.css" />
+  </head>
+  <body class="bg-light">
+    <!-- menu section -->
+    <section class="shop-container">
+      <header class="pb-4" id="topBody">
+        <navbar-tg></navbar-tg>
+        <div class="container">
+          <div class="row">
+            <div class="breadcrub-wrapper mt-4">
+              <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+                <ol class="breadcrumb d-flex justify-content-end me-3">
+                  <li class="breadcrumb-item active" aria-current="page">
+                    فروشگاه
+                  </li>
+                  <li class="breadcrumb-item text-white">
+                    <a href="index.html" class="text-white">صفحه اصلی</a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="courses-and-product-wrapper">
+        <div class="container mt-4 mb-7" style="height: 70px">
+          <div class="row d-flex align-items-center">
+            <div class="col-12 bg-white rounded-2">
+              <div
+                class="top-bar-wrapper d-flex flex-wrap justify-content-between"
+              >
+                <div class="left-side-top-bar py-1" style="height: 63px">
+                  <form class="w-100 search-section search-field-form">
+                    <div class="w-100 input-wrapper position-relative">
+                      <a
+                        href="#"
+                        class="target-link-location position-absolute z-3"
+                      >
+                        <i class="fa fa-magnifying-glass"></i>
+                      </a>
+                      <input
+                        type="search"
+                        id="search-field"
+                        class="form-control search-header-input form-control-lg py-3 search-prod text-end form-control rounded-0 form-control-lg pe-0 px-6"
+                        placeholder="...جستجو کنید"
+                        style="font-size: 15px"
+                        autocomplete="off"
+                      />
+                    </div>
+                    <ul
+                      class="z-4 w-100 py-2 me-3 text-end pe-2 suggest-list list-unstyled d-flex flex-column align-items-start text-dark"
+                      id="suggest-list"
+                    ></ul>
+                  </form>
+                </div>
+                <div
+                  class="right-side-top-bar sort-product-section p-3 d-flex align-items-center"
+                >
+                  <div class="catagory-title d-flex me-3">
+                    <span
+                      id="catagory-title"
+                      class="bg-primary text-white p-1 text-center rounded-1"
+                    >
+                      پیش فرض
+                    </span>
+                  </div>
+                  <div class="dropdown-center">
+                    <button
+                      class="btn btn-secondary px-3 py-2 rounded-0 d-flex align-items-center"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <i class="fa fa-arrow-down mx-2"></i>
+                      <span class="mx-2" id="sort-btn">مرتب سازی بر اساس</span>
+                    </button>
+                    <ul class="dropdown-menu w-100 rounded-0">
+                      <li>
+                        <a
+                          class="dropdown-item text-end"
+                          id="default-mode"
+                          href="#"
+                        >
+                          پیشفرض</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item text-end"
+                          id="most-popular"
+                          href="#"
+                          >محبوب ترین</a
+                        >
+                      </li>
+
+                      <li>
+                        <a
+                          class="dropdown-item text-end"
+                          id="expensive"
+                          href="#"
+                          >گرانترین</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item text-end" id="cheapest" href="#"
+                          >ارزان ترین</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="container mt-sm-9 mt-md-6 courses-and-prod"
+          style="z-index: -1000"
+        >
+          <div class="row" id="prodWrapper"></div>
+        </div>
+      </section>
+      <footer>
+        <footer-tg></footer-tg>
+      </footer>
+      <top-tg></top-tg>
+    </section>
+    <!-- preloader gif -->
+    <div class="preload-container">
+      <img src="assest/img/loading.gif" class="preload-img img-fluid" style="width: 100vh;" alt="" />
+    </div>
+    <script src="assest/js/bootstrap.bundle.min.js"></script>
+    <script src="assest/js/swiper-bundle.js"></script>
+    <script src="assest/js/main.js"></script>
+    <script type="module" src="assest/js/main-shop.js"></script>
+  </body>
+</html>

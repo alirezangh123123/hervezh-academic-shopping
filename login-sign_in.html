@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ورود/ثبت نام</title>
+    <link rel="stylesheet" href="assest/css/font-awesome.css" />
+    <link rel="stylesheet" href="assest/css/bootstrap.css" />
+    <link rel="stylesheet" href="assest/css/preloader.css" />
+    <link rel="stylesheet" href="assest/css/sweetAlert.css">
+    <link rel="stylesheet" href="assest/css/style.css" />
+    <link rel="stylesheet" href="assest/css/login.css" />
+    <link rel="stylesheet" href="assest/css/preloader.css">
+  </head>
+  <body class="bg-light">
+    <section class="login-form">
+      <div class="container d-flex justify-content-center mt-8">
+        <div class="row">
+          <div
+            class="col-12 main-container shadow py-7 px-6 position-relative d-flex flex-column justify-content-between"
+          >
+            <div class="fake-card-shadow"></div>
+
+            <!-- Wrapper for login and sign-up sections -->
+            <div
+              class="login-sign-up-wrapper d-flex flex-column align-items-center flex-lg-row"
+            >
+              <!-- Login Section -->
+              <div class="login-wrapper d-flex justify-content-center">
+                <div class="custom-login-card custom-card bg-white rounded-1">
+                  <h2 class="login-title def-title">ورود</h2>
+                  <form class="login-form">
+                    <div class="container">
+                      <div class="">
+                        <div class="input-container">
+                          <input type="text" id="login-user-name"/>
+                          <label for="login-user-name">نام کاربری</label>
+                          <div class="bar"></div>
+                        </div>
+                        <div class="input-container">
+                          <input type="password" id="login-password" />
+                          <label for="login-password">رمز عبور</label>
+                          <div class="bar"></div>
+                        </div>
+                        <div
+                          class="button-container d-flex justify-content-center"
+                        >
+                          <button type="submit" class="btn btn-lg w-50 login-submit">
+                            !بریم تو کارش
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- Sign-up Section -->
+              <div class="sign-up-card custom-card">
+                <div class="toggle">
+                  <i class="fa fa-pencil"></i>
+                </div>
+                <h2 class="sign-up-title def-title">
+                  ثبت نام
+                  <div class="close-btn">
+                    <i class="fa fa-times-circle"></i>
+                  </div>
+                </h2>
+                <form class="sign-up-form">
+                  <div class="input-container">
+                    <input type="text" autocomplete="off" id="sign-up-user-name" required/>
+                    <label for="sign-up-user-name">نام کاربری</label>
+                    <div class="bar"></div>
+                  </div>
+                  <div class="input-container">
+                    <input type="password" autocomplete="off" id="sign-up-password" required/>
+                    <label for="sign-up-password">کلمه عبور</label>
+                    <div class="bar"></div>
+                  </div>
+                  <div class="input-container">
+                    <input type="password"autocomplete="off" id="r-sing-up-password" required/>
+                    <label for="r-sing-up-password">تکرار کلمه عبور</label>
+                    <div class="bar"></div>
+                  </div>
+                  <div
+                    class="button-container register-btn d-flex justify-content-center"
+                  >
+                    <button type="submit" class="btn btn-lg w-50 " id="reg-btn">
+                      ثبت نام
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- End of login-sign-up-wrapper -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- validation-toasts -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+    <div class="preload-container">
+      <img src="assest/img/loading.gif" class="preload-img img-fluid"  alt="" />
+    </div>
+    <script src="assest/js/bootstrap.bundle.min.js"></script>
+    <script src="assest/js/sweetalert2.all.js"></script>
+    <script src="assest/js/main.js"></script>
+    <script type="module" src="assest/js/login-form.js"></script>
+  </body>
+</html>
