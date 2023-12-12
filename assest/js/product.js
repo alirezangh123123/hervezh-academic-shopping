@@ -1418,19 +1418,19 @@ let PostToBasket = async (targetBtn, btn) => {
       );
       let showResult = await fetchData.json();
       console.log(showResult);
-     await Swal.fire({
+      await Swal.fire({
         title: "محصول به سبد خرید افزوده شد",
-        position:"bottom-end",
-        icon: 'success',
+        position: "bottom-end",
+        icon: "success",
         showConfirmButton: false,
         timer: 1500,
-        toast:true,
-        customClass:{
-          title:"my-custom-swal",
-          container:"my-custom-swal_container",
-        }
+        toast: true,
+        customClass: {
+          title: "my-custom-swal",
+          container: "my-custom-swal_container",
+        },
       });
-      
+
       btn.textContent = "محصول در سبد خرید وجود دارد";
       await btn.classList.add("disabled");
     } else {
@@ -1457,9 +1457,28 @@ let getDatasFromDb = async () => {
     }
   });
 };
+let getCookie = (cookieName) => {
+  let cookieArray = $.cookie.split(";");
+  let getCookie = null;
+
+  cookieArray.some((cookie) => {
+    if (cookie.includes(cookieName)) {
+      getCookie = cookie.substring(cookie.indexOf("=") + 1);
+      return true;
+    }
+  });
+  return getCookie;
+};
 window.addEventListener("load", () => {
   const preLoaderWrapper = $.getElementsByClassName("preload-container");
   preLoaderWrapper[0].classList.add("hidden");
+  if (!getCookie("user-data")) {
+    addToBasketBtn.forEach((btn) => {
+      btn.classList.add("disabled");
+      btn.textContent = "ابتدا وارد شوید";
+    });
+  }
+
   getDatasFromDb();
   //active session btn
   getSissonBtn[0].addEventListener("click", () => {
