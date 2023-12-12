@@ -93,8 +93,8 @@ if (showCorrectProdInDom) {
             </button>
           </div>
           <div class="col-lg-6 w-50">
-            <button class="btn w-75 btn-primary btn-lg">
-              <a href="#" class="text-white">مشاهده جلسات دوره</a>
+            <button class="btn w-75 btn-primary btn-lg session-btn">
+              <a href="#session-part" class="text-white">مشاهده جلسات دوره</a>
             </button>
           </div>
         </div>
@@ -873,7 +873,7 @@ ${showCorrectProdInDom.second_motto_course_desc}
               aria-labelledby="profile-tab"
               tabindex="0"
             >
-              <div class="container">
+              <div class="container" id="session-part">
                 <div class="row">
                   <div class="col-12 intro-session-prod w-100">
                     <div
@@ -1386,6 +1386,13 @@ var swiper = new Swiper(".relateSwiper", {
     },
   },
 });
+let getSissonBtn = $.getElementsByClassName("session-btn");
+let homTab = $.getElementById("home-tab");
+let profTab = $.getElementById("profile-tab");
+let ProfTabPane = $.getElementById("profile-tab-pane");
+let homeTabPane = $.getElementById("home-tab-pane");
+console.log(ProfTabPane);
+console.log(homeTabPane);
 function isProductInBasket(productId) {
   return basketSet.has(productId);
 }
@@ -1421,7 +1428,16 @@ let PostToBasket = async (targetBtn) => {
     console.log("something is wrong", e);
   }
 };
-window.addEventListener("load",()=>{
+window.addEventListener("load", () => {
   const preLoaderWrapper = $.getElementsByClassName("preload-container");
   preLoaderWrapper[0].classList.add("hidden");
-})
+  //active session btn
+  getSissonBtn[0].addEventListener("click", () => {
+    homTab.classList.remove("active");
+    profTab.classList.add("active");
+    homeTabPane.classList.remove("show");
+    homeTabPane.classList.remove("active");
+    ProfTabPane.classList.add("show");
+    ProfTabPane.classList.add("active");
+  });
+});

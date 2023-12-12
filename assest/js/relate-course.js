@@ -2,7 +2,6 @@ let $ = document;
 import { product } from "../db/product.js";
 const relateCourseWrapper = $.getElementById("relate-course-slider-wrapper");
 let relate_slider = product.forEach((item) => {
-  console.log(item.id);
   relateCourseWrapper.insertAdjacentHTML(
     "beforeend",
     `
@@ -37,5 +36,4 @@ let relate_slider = product.forEach((item) => {
   </div>`
   );
 });
-console.log(product);
 export { relate_slider };
